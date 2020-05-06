@@ -1,9 +1,10 @@
 #include <stdio.h>
 int main(void)
 {
-	printf("     short int: %d¹ÙÀÌÆ®\n", sizeof(short int));
-	printf("            int: %d¹ÙÀÌÆ®\n", sizeof(int));
-	printf("      long int: %d¹ÙÀÌÆ®\n", sizeof(long int));
-	printf("long long int: %d¹ÙÀÌÆ®\n", sizeof(long long int));
+	printf("    short int : %dë°”ì´íŠ¸\n", sizeof(short int));
+	printf("          int : %dë°”ì´íŠ¸\n", sizeof(int));
+	printf("     long int : %dë°”ì´íŠ¸\n", sizeof(long int));
+	printf("long long int : %dë°”ì´íŠ¸\n", sizeof(long long int));
+	
 	return 0;
 }
