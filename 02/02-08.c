@@ -2,11 +2,11 @@
 #define PI 3.14159
 int main(void)
 { 
-	int	r = 10;		// r : ¿øÀÇ ¹İÁö¸§
+	int	r = 10;			// r : ì›ì˜ ë°˜ì§€ë¦„
 
 	res = r * r * PI;		// res = r * r * 3.14159;
 
-	printf("¿øÁÖÀ² : %f \n", res);
+	printf("ì›ì£¼ìœ¨ : %f \n", res);
 
 	return 0;
 }
