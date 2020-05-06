@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main(void)
 {
-	int	a = 0x0012FF7C;	// int	a = 1245052;
-	int	b = 0x0000FFFF;	// int	b = 65535;
+	int	a = 0x0012FF7C;			// int	a = 1245052;
+	int	b = 0x0000FFFF;			// int	b = 65535;
 
 	printf("a & b : %p, %d\n", a&b, a&b);  // 0000FF7C, 65404
 	printf("a | b : %p, %d\n", a|b, a|b);  // 0012FFFF, 1245183
