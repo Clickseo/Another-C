@@ -1,13 +1,13 @@
 #include <stdio.h>
 int main(void)
 {
-	int		r = 10;			// r: ¿øÀÇ ¹İÁö¸§
+	int		r = 10;			// r: ì›ì˜ ë°˜ì§€ë¦„
 	double		res;
-	const double	PI = 3.14159;		// ±âÈ£ »ó¼ö: ¿øÁÖÀ²
+	const double	PI = 3.14159;		// ê¸°í˜¸ ìƒìˆ˜: ì›ì£¼ìœ¨
 
-	res = r * r * PI;		// 314.159000
+	res = r * r * PI;			// 314.159000
 
-	printf("¿øÁÖÀ²: %f \n", res);
+	printf("ì›ì£¼ìœ¨: %f \n", res);
 
 	return 0;
 }
