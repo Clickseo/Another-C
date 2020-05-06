@@ -1,5 +1,6 @@
 #include <stdio.h>
-// ÀÚ·áÇüÀÇ ÀçÁ¤ÀÇ
+
+// ìë£Œí˜•ì˜ ì¬ì •ì˜
 typedef int Clickseo;
 
 int main(void)
