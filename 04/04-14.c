@@ -4,9 +4,9 @@ int main(void)
 {
 	int	a = 10, b = 20;
 
-	printf("È£Ãâ Àü : a = %d, b = %d \n", a, b);	// 10 20
+	printf("í˜¸ì¶œ ì „ : a = %d, b = %d \n", a, b);	// 10 20
 	SWAP(a,  b);
-	printf("È£Ãâ ÈÄ : a = %d, b = %d \n", a, b);	// 10 20
+	printf("í˜¸ì¶œ í›„ : a = %d, b = %d \n", a, b);	// 10 20
 
 	return 0;
 }
