@@ -1,14 +1,14 @@
 #include <stdio.h>
 void	OUTPUT(void);
 
-// Àü¿ª º¯¼ö ¼±¾ğ
+// ì „ì—­ ë³€ìˆ˜ ì„ ì–¸
 int	a;
 
 int main(void)
 {
-	// Áö¿ªº¯¼ö ¼±¾ğ ¹× ÃÊ±âÈ­
+	// ì§€ì—­ ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
 	int	a = 10;
-	printf("a : %d \n", a);	// a : 10
+	printf("a : %d \n", a);		// a : 10
 
 	OUTPUT();
 
@@ -17,6 +17,6 @@ int main(void)
 
 void	OUTPUT(void)
 {
-	// Àü¿ª º¯¼öÀÇ Á¢±Ù ¹× Ãâ·Â
-	printf("a : %d \n", a);	// a : 0
+	// ì „ì—­ ë³€ìˆ˜ì˜ ì ‘ê·¼ ë° ì¶œë ¥
+	printf("a : %d \n", a);		// a : 0
 }
