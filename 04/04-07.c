@@ -3,17 +3,17 @@ int main(void)
 {
 	int	a, b, c, d, max;
 
-	printf("4°³ÀÇ Á¤¼ö ÀÔ·Â : ");
-	scanf("%d %d %d %d", &a, &b, &c, &d);
+	printf("4ê°œì˜ ì •ìˆ˜ ìž…ë ¥ : ");
+	scanf_("%d %d %d %d", &a, &b, &c, &d);		// scanf("%d %d %d %d", &a, &b, &c, &d);
 
-	// 4°³ÀÇ Á¤¼ö °ª Áß¿¡¼­ ÃÖ´ñ°ªÀ» ±¸ÇÏ´Â ºÎºÐ
+	// 4ê°œì˜ ì •ìˆ˜ ê°’ ì¤‘ì—ì„œ ìµœëŒ€ê°’ì„ êµ¬í•˜ëŠ” ë¶€ë¶„
 	if(a > b)	max = a;
 	else		max = b;
 
 	if(c > max)	max = c;
 	if(d > max)	max = d;
 
-	printf("ÃÖ´ñ°ª : %d \n", max);
+	printf("ìµœëŒ€ê°’ : %d \n", max);
 
 	return 0;
 }
