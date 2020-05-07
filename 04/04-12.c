@@ -23,6 +23,7 @@ int  Factorial(int  n)
 	if(n <= 1)
 		return 1;
 
-	// 재귀 함수 호출 : Factorial 함수 내부에서 Factorial 함수 호출
+	// 재귀 함수 호출
+	// Factorial 함수 내부에서 Factorial 함수 호출
 	return  n * Factorial(n - 1);
 }
