@@ -7,7 +7,7 @@ int main(void)
 
 	DIV(a, b, &quot, &rem);
 
-	printf("¸ò : %d, ³ª¸ÓÁö : %d \n", quot, rem);	// 3, 1
+	printf("ëª« : %d, ë‚˜ë¨¸ì§€ : %d \n", quot, rem);	// 3, 1
 
 	return 0;
 }
