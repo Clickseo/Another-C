@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// ÇÔ¼ö Á¤ÀÇ : OUTPUT( ) ÇÔ¼ö(¸Þ½ÃÁö Ãâ·Â ±â´É ¼öÇà)
+// í•¨ìˆ˜ ì •ì˜ : OUTPUT() í•¨ìˆ˜ -- ë©”ì‹œì§€ ì¶œë ¥ ê¸°ëŠ¥ ìˆ˜í–‰
 void OUTPUT(void)
 {
 	printf("Hello World!!! \n");
@@ -8,7 +8,7 @@ void OUTPUT(void)
 
 int main(void)
 {
-	// ÇÔ¼ö È£Ãâ
+	// í•¨ìˆ˜ í˜¸ì¶œ
 	OUTPUT();
 
 	return 0;
