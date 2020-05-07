@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main(void)
 {
-	int		a = 10, b = 20;
-	int		*pa, *pb;
+	int	a = 10, b = 20;
+	int	*pa, *pb;
 
 	pa = &a;
 	pb = &b;
@@ -16,5 +16,6 @@ int main(void)
 
 	printf("pa && pb : %d \n", pa && pb );
 	printf("pa || pb   : %d \n", pa || pb );
+	
 	return 0;
 }
