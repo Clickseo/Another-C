@@ -18,18 +18,18 @@ int main(void)
 	return 0;
 }
 
-// 함수 정의 : 입력 받은 4개의 정수 중 최댓값 반환
+// 함수 정의 : 전달(입력) 받은 4개의 정수 중에서 최대값 반환
 int	MAX(int a, int b, int c, int d)
 {
 	int		max;
 
-	// 4개의 정수 값 중에서 최대값을 구하는 부분
+	// 4개의 정수 중에서 최대값을 구하는 부분
 	if(a > b)	max = a;
 	else		max = b;
 
 	if(c > max)	max = c;
 	if(d > max)	max = d;
 
-	// 계산된 최대값을 호출 함수(main)에 반환
+	// 최종 결과를 호출 함수(main 함수)에 반환
 	return max;
 }
