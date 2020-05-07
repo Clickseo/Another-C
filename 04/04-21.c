@@ -1,17 +1,17 @@
 #include <stdio.h>
 void OUTPUT(void);
 
-// Àü¿ª º¯¼ö ¼±¾ð: ÇÁ·Î±×·¥ ½ÇÇà ½Ã µ¥ÀÌÅÍ ¿µ¿ª¿¡ ÇÒ´ç
+// ì „ì—­ ë³€ìˆ˜ ì„ ì–¸ : í”„ë¡œê·¸ëž¨ ì‹¤í–‰ ì‹œ ë°ì´í„° ì˜ì—­ì— í• ë‹¹
 int	a;
 
 int main(void)
 {
-	// ÃÊ±âÈ­µÈ Àü¿ª º¯¼öÀÇ Ãâ·Â
+	// ì´ˆê¸°í™” ëœ ì „ì—­ ë³€ìˆ˜ì˜ ì¶œë ¥
 	printf("a : %d \n", a);		// 0
 
 	OUTPUT();
 
-	// Áõ°¡µÈ Àü¿ª º¯¼öÀÇ Ãâ·Â
+	// ì¦ê°€ ëœ ì „ì—­ ë³€ìˆ˜ì˜ ì¶œë ¥
 	printf("a : %d \n", a);		// 1
 
 	return 0;
@@ -19,8 +19,9 @@ int main(void)
 
 void OUTPUT(void)
 {
-	// ÃÊ±âÈ­µÈ Àü¿ª º¯¼öÀÇ Ãâ·Â
-	printf("a : %d \n", a);	// 0
-	// Àü¿ª º¯¼öÀÇ ÈÄÀ§ Áõ°¡
+	// ì´ˆê¸°í™” ëœ ì „ì—­ ë³€ìˆ˜ì˜ ì¶œë ¥
+	printf("a : %d \n", a);		// 0
+	
+	// ì „ì—­ ë³€ìˆ˜ì˜ í›„ìœ„ ì¦ê°€
 	a++;
 }
