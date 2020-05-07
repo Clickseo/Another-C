@@ -4,14 +4,14 @@ int main(void)
 	int	a = 10;
 	int	*p = &a;
 
-	printf("a : %d \n", *p );			// 10
+	printf("a : %d \n", *p );		// 10
 	printf("a : %d \n", (*p)++ );		// 10
 
-	printf("a : %d \n", *p );			// 11
+	printf("a : %d \n", *p );		// 11
 	printf("a : %d \n", *p++ );		// 11
 
-	printf("a : %d \n", *p );			// ¾²·¹±â °ª
-	printf("a : %d \n", ++(*p) );		// ¾²·¹±â °ª
+	printf("a : %d \n", *p );		// ì“°ë ˆê¸° ê°’
+	printf("a : %d \n", ++(*p) );		// ì“°ë ˆê¸° ê°’
 
 	return 0;
 }
