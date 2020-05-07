@@ -7,7 +7,7 @@ int main(void)
 
 	quot = DIV(a, b);
 
-	printf("¸ò : %d, ³ª¸ÓÁö : %d \n", quot, rem);	// 1, ???
+	printf("ëª« : %d, ë‚˜ë¨¸ì§€ : %d \n", quot, rem);	// 1, ???
 
 	return 0;
 }
@@ -16,10 +16,10 @@ int	DIV(int a, int b)
 {
 	int	quot, rem;
 
-	quot = a / b;
-	rem = a % b;
+	quot = a / b;	// ëª« ê³„ì‚°
+	rem = a % b;	// ë‚˜ë¨¸ì§€ ê²Œì‚°
 
-	printf("¸ò : %d, ³ª¸ÓÁö : %d \n", quot, rem);	// 3, 1
+	printf("ëª« : %d, ë‚˜ë¨¸ì§€ : %d \n", quot, rem);	// 3, 1
 
 	return quot, rem;
 }
