@@ -4,8 +4,8 @@ int main(void)
 	int	a;
 	void	*p = &a;
 
-	printf("ÀÓÀÇÀÇ Á¤¼ö ÀÔ·Â : ");
-	scanf("%d", p);
+	printf("ì„ì˜ì˜ ì •ìˆ˜ ì…ë ¥ : ");
+	scanf_s("%d", p);			// scanf("%d", p);
 
 	*(int *)p = *(int *)p + 1;		// a = a + 1;
 
