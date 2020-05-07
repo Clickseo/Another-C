@@ -4,13 +4,13 @@ int main(void)
 	int	kor, eng, math, tot;
 	double	ave;
 
-	printf("¼¼ °ú¸ñÀÇ Á¡¼ö ÀÔ·Â : ");
-	scanf("%d %d %d", &kor, &eng, &math);
+	printf("ì„¸ ê³¼ëª©ì˜ ì ìˆ˜ ì…ë ¥ : ");
+	scanf_s("%d %d %d", &kor, &eng, &math);		// scanf("%d %d %d", &kor, &eng, &math);
 
 	tot = kor + eng + math;
 	ave = (kor + eng + math) / 3.0;
 
-	printf("ÃÑÁ¡ : %d, Æò±Õ : %.2lf \n", tot, ave);
+	printf("ì´ì  : %d, í‰ê·  : %.2lf \n", tot, ave);
 
 	return 0;
 }
