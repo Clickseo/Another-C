@@ -7,10 +7,10 @@ int main(void)
 	pa = &a;
 	pb = &b;
 
-	printf("ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â : ");
-	scanf("%d %d", pa, pb);
+	printf("ì„ì˜ì˜ ë‘ ì •ìˆ˜ ì…ë ¥ : ");
+	scanf_s("%d %d", pa, pb);		// scanf("%d %d", pa, pb);
 
-	res = *pa + *pb;		// res = a + b;
+	res = *pa + *pb;			// res = a + b;
 
 	printf("%d + %d = %d \n", a, b, res);
 
