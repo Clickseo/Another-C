@@ -1,28 +1,28 @@
 #include <stdio.h>
 
-// Factorial( ) ÇÔ¼öÀÇ ¿øÇü ¼±¾ğ
+// í•¨ìˆ˜ ì›í˜• ì„ ì–¸ : Factorial í•¨ìˆ˜
 int  Factorial(int  n);
 
 int main(void)
 {
 	int	num;
 
-	printf("ÀÓÀÇÀÇ Á¤¼ö ÀÔ·Â : ");
-	scanf("%d", &num);
+	printf("ì„ì˜ì˜ ì •ìˆ˜ ì…ë ¥ : ");
+	scanf_s("%d", &num);		// scanf("%d", &num);
 
-	// Factorial( ) ÇÔ¼ö È£Ãâ
+	// Factorial( ) í•¨ìˆ˜ í˜¸ì¶œ
 	printf("Factorial %d : %d \n", num, Factorial(num) );
 
 	return 0;
 }
 
-// Factorial( ) ÇÔ¼ö Á¤ÀÇ
+// í•¨ìˆ˜ ì •ì˜ : Factorial í•¨ìˆ˜
 int  Factorial(int  n)
 {
-	// Àç±Í ÇÔ¼öÀÇ Å»Ãâ Á¶°Ç
+	// ì¬ê·€ í•¨ìˆ˜ì˜ íƒˆì¶œ ì¡°ê±´
 	if(n <= 1)
 		return 1;
 
-	// Àç±Í ÇÔ¼ö È£Ãâ: Factorial( ) ÇÔ¼ö ³»ºÎ¿¡¼­ Factorial( ) ÇÔ¼ö È£Ãâ
+	// ì¬ê·€ í•¨ìˆ˜ í˜¸ì¶œ : Factorial í•¨ìˆ˜ ë‚´ë¶€ì—ì„œ Factorial í•¨ìˆ˜ í˜¸ì¶œ
 	return  n * Factorial(n - 1);
 }
