@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-// ÇÔ¼ö Á¤ÀÇ : OUTPUT( ) ÇÔ¼ö
+// í•¨ìˆ˜ ì •ì˜ : OUTPUT() í•¨ìˆ˜
 void OUTPUT(void)
 {
 	printf("Hello World!!! \n");
 }
+
 int main(void)
 {
 	return 0;
