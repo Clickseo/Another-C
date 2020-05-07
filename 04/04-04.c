@@ -2,6 +2,7 @@
 int main(void)
 {
 	OUTPUT();
+	
 	return 0;
 }
 
