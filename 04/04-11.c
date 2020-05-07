@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// ÇÔ¼ö ¿øÇü ¼±¾ğ
+// í•¨ìˆ˜ ì›í˜• ì„ ì–¸
 int	SUM(int, int, int);
 double	AVE(int, int, int);
 
@@ -9,29 +9,29 @@ int main(void)
 	int	kor, eng, math, tot;
 	double	ave;
 
-	printf("¼¼ °ú¸ñÀÇ Á¡¼ö ÀÔ·Â : ");
-	scanf("%d %d %d", &kor, &eng, &math);
+	printf("3ê³¼ëª©ì˜ ì ìˆ˜ ì…ë ¥ : ");
+	scanf_s("%d %d %d", &kor, &eng, &math);		// scanf("%d %d %d", &kor, &eng, &math);
 
-	// ´ÜÀÏ ÇÔ¼öÀÎ main( ) ÇÔ¼ö¸¸À¸·Î ÃÑÁ¡°ú Æò±ÕÀ» Á÷Á¢ °è»ê
+	// ì§ì ‘ ê³„ì‚° : ì´ì ê³¼ í‰ê·  ê³„ì‚° -- ë‹¨ì¼ í•¨ìˆ˜(main í•¨ìˆ˜)
 	// tot = kor + eng + math;
 	// ave = (kor + eng + math) / 3.0;
 
-	// ÃÑÁ¡°ú Æò±ÕÀ» ÇÔ¼ö È£ÃâÀ» ÅëÇÏ¿© °è»ê
+	// í•¨ìˆ˜ í˜¸ì¶œ : ì´ì ê³¼ í‰ê·  ê³„ì‚°
 	tot = SUM(kor, eng, math);
 	ave = AVE(kor, eng, math);
 
-	printf("ÃÑÁ¡ : %d, Æò±Õ : %.2lf \n", tot, ave);
+	printf("ì´ì  : %d, í‰ê·  : %.2lf \n", tot, ave);
 
 	return 0;
 }
 
-// 3°ú¸ñ¿¡ ´ëÇÑ ÃÑÁ¡À» ±¸ÇÏ´Â ÇÔ¼ö Á¤ÀÇ
+// SUM í•¨ìˆ˜ ì •ì˜ : 3ê³¼ëª©ì— ëŒ€í•œ ì´ì  ê³„ì‚°
 int	SUM(int a, int b, int c)
 {
 	return a + b + c;
 }
 
-// 3°ú¸ñ¿¡ ´ëÇÑ Æò±ÕÀ» ±¸ÇÏ´Â ÇÔ¼ö Á¤ÀÇ
+// AVE í•¨ìˆ˜ ì •ì˜ : 3ê³¼ëª©ì— ëŒ€í•œ í‰ê·  ê³„ì‚°
 double	AVE(int a, int b, int c)
 {
 	return (a + b + c) / 3.0;
