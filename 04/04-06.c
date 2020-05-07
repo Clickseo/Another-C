@@ -1,5 +1,8 @@
 #include <stdio.h>
-void OUTPUT(int  num);		// void OUTPUT(int);
+
+// void OUTPUT(int);
+void OUTPUT(int num);
+
 int main(void)
 {
 	OUTPUT(5);
