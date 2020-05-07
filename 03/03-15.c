@@ -9,16 +9,16 @@ int main(void)
 	pc = &c;
 	pd = &d;
 
-	printf("4°³ÀÇ Á¤¼ö ÀÔ·Â : ");
-	scanf("%d %d %d %d", pa, pb, pc, pd);
-
+	printf("4ê°œì˜ ì •ìˆ˜ ì…ë ¥ : ");
+	scanf_s("%d %d %d %d", pa, pb, pc, pd);		// scanf("%d %d %d %d", pa, pb, pc, pd);
+	
 	if(*pa < *pb)		min = *pa;
 	else			min = *pb;
 
 	if(*pc < min)		min = *pc;
 	if(*pd < min)		min = *pd;
 
-	printf("ÃÖ¼Ò°ª : %d \n", min);
+	printf("ìµœì†Œê°’ : %d \n", min);
 
 	return 0;
 }
