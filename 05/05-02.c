@@ -5,11 +5,11 @@
 
 int main(void)
 {
-	int	i;
+	// 배열 선언 : 메모리 할당
 	int	arr[MAX_SIZE];			// int	arr[3];
 
 	// 사용자로부터 3개의 정수형 데이터 입력
-	for(i=0; i<MAX_SIZE; i++)
+	for(int i=0; i<MAX_SIZE; i++)
 		scanf_s("%d", &arr[i] );	// scanf("%d", &arr[i] );
 
 	// 배열에 저장되어 있는 데이터 출력
