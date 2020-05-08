@@ -1,21 +1,22 @@
 #include <stdio.h>
+
 #define MAX_SIZE 5
+
 int main(void)
 {
-	int	arr[MAX_SIZE] = {10, 20, 30, 40, 50};
+	int	arr[MAX_SIZE] = { 10, 20, 30, 40, 50 };
 	int	*p;
 
-	p = arr;		// p = &arr[0];
 
-	printf("¼ø¹æÇâ Ãâ·Â: ");
+	printf("ìˆœë°©í–¥ ì¶œë ¥ : ");
+	p = arr;				// p = &arr[0];	
 	for ( ; p < arr + MAX_SIZE;  p++ )
 		printf("%3d", *p );
 	printf("\n");
 
-	p = arr + MAX_SIZE - 1;		// p = &arr[4];
-
-	printf("¿ª¹æÇâ Ãâ·Â: ");
-	for (; p >= arr;  p-- )
+	printf("ì—­ë°©í–¥ ì¶œë ¥ : ");	
+	p = arr + MAX_SIZE - 1;			// p = &arr[4];
+	for ( ; p >= arr;  p-- )
 		printf("%3d", *p );
 	printf("\n");
 
