@@ -4,20 +4,20 @@ int main(void)
 {
 	int	i, j, arr[MAX_SIZE]; 
 
-	// »ç¿ëÀÚ·ÎºÎÅÍ ¹è¿­ÀÇ ¿ø¼Ò MAX_SIZE(10) °³¼ö¸¸Å­ ÀÔ·Â ¹Þ´Â´Ù.
-	printf("%d°³ÀÇ ¹è¿­ ¿ø¼Ò¸¦ ÀÔ·ÂÇÏ½Ã¿À!!! \n", MAX_SIZE);
+	// ì‚¬ìš©ìžë¡œë¶€í„° ë°°ì—´ì˜ ì›ì†Œ ê°œìˆ˜ë§Œí¼ ìž…ë ¥ ë°›ëŠ”ë‹¤.
+	printf("%dê°œì˜ ë°°ì—´ ì›ì†Œë¥¼ ìž…ë ¥í•˜ì‹œì˜¤!!! \n", MAX_SIZE);
 	for(i = 0; i < MAX_SIZE ; i++)
 	{
 		printf("arr[%d]: ", i);
-		scanf("%d", &arr[i]);
+		scanf_s("%d", &arr[i]);		// scanf("%d", &arr[i]);
 	}
 
-	// ¹è¿­ÀÇ °¢ ¿ø¼ÒÀÇ µ¥ÀÌÅÍ¸¦ È÷½ºÅä±×·¥ Çü½ÄÀ¸·Î Ãâ·Â
-	printf("\n\n    ¹è¿­ Ã·ÀÚ °ª \t È÷½ºÅä±×·¥\n");
+	// ë°°ì—´ì˜ ê° ì›ì†Œì˜ ë°ì´í„°ë¥¼ ížˆìŠ¤í† ê·¸ëž¨ í˜•ì‹ìœ¼ë¡œ ì¶œë ¥
+	printf("\n\n    ë°°ì—´ ì²¨ìž ê°’ \t ížˆìŠ¤í† ê·¸ëž¨\n");
 	for(i = 0; i < MAX_SIZE ; i++)
 	{
 		printf("\t%d %5d \t", i, arr[i] );
-		// ¹è¿­ÀÇ i¹øÂ° ¿ø¼Ò °³¼ö¸¸Å­ ´«Ç¥(*)¸¦ Ãâ·Â
+		// ë°°ì—´ì˜ ië²ˆì§¸ ì›ì†Œ ê°œìˆ˜ë§Œí¼ ëˆˆí‘œ(*)ë¥¼ ì¶œë ¥
 		for(j = 0; j < arr[i]; j++)
 			printf("*");
 		printf("\n");
