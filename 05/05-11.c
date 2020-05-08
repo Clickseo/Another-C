@@ -1,20 +1,20 @@
 #include <stdio.h>
 #define MAX_SIZE 3
 
-// 3°³ÀÇ ¹è¿­ ¿ø¼Ò¸¦ Ãâ·ÂÇÏ±â À§ÇÑ OUTPUT( ) ÇÔ¼ö ¿øÇü ¼±¾ð
+// í•¨ìˆ˜ ì›í˜• : 3ê°œì˜ ë°°ì—´ ì›ì†Œë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•œ OUTPUT í•¨ìˆ˜
 void	OUTPUT(int, int, int);
 
 int main(void)
 {
 	int	arr[3] = {10, 20, 30};
 
-	// 3°³ÀÇ ¹è¿­ ¿ø¼Ò¸¦ ÇÔ¼ö ÀÎÀÚ·Î ³Ñ°Ü OUTPUT( ) ÇÔ¼ö È£Ãâ
+	// í•¨ìˆ˜ í˜¸ì¶œ : 3ê°œì˜ ë°°ì—´ ì›ì†Œë¥¼ í•¨ìˆ˜ ì¸ìžë¡œ ë„˜ê²¨ OUTPUT í•¨ìˆ˜ í˜¸ì¶œ
 	OUTPUT(arr[0], arr[1], arr[2]);
 
 	return 0;
 }
 
-// 3°³ÀÇ º¯¼ö¸¦ ÇÑ²¨¹ø¿¡ Ãâ·ÂÇÏ´Â OUTPUT( ) ÇÔ¼ö Á¤ÀÇ
+// í•¨ìˆ˜ ì •ì˜ : 3ê°œì˜ ë³€ìˆ˜ë¥¼ í•œêº¼ë²ˆì— ì¶œë ¥í•˜ëŠ” OUTPUT í•¨ìˆ˜
 void	OUTPUT(int a, int b, int c)
 {
 	printf("a: %d, b: %d, c: %d \n", a, b, c);
