@@ -3,14 +3,14 @@
 int main(void)
 {
 	int	i;
-	int	arr[MAX_SIZE] = {1,2, 3, 4, 5, 6, 7, 8, 9, 10};
+	int	arr[MAX_SIZE] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-	// ¹è¿­ÀÇ ¼ø¹æÇâ Ãâ·Â
+	// ë°°ì—´ì˜ ìˆœë°©í–¥ ì¶œë ¥
 	for(i=0; i<MAX_SIZE; i++)
 		printf("%3d", arr[i]);
 	printf("\n");
 
-	// ¹è¿­ÀÇ ¿ª¹æÇâ Ãâ·Â
+	// ë°°ì—´ì˜ ì—­ë°©í–¥ ì¶œë ¥
 	for(i=MAX_SIZE-1; i>=0; i--)
 		printf("%3d", arr[i]);
 	printf("\n");
