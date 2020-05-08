@@ -1,21 +1,22 @@
 #include <stdio.h>
+
 #define MAX_SIZE 3
 
-// Á¤¼ö µ¥ÀÌÅÍ ÇÏ³ª¸¦ Ãâ·ÂÇÏ´Â OUTPUT( ) ÇÔ¼ö ¼±¾ğ
+// í•¨ìˆ˜ ì›í˜• : ì •ìˆ˜ ë°ì´í„° í•˜ë‚˜ë¥¼ ì¶œë ¥í•˜ëŠ” OUTPUT í•¨ìˆ˜
 void	OUTPUT(int);
+
 int main(void)
 {
-	int	i;
-	int	arr[3] = {10, 20, 30};
+	int	arr[3] = { 10, 20, 30 };
 
-	// ¹è¿­ÀÇ ¿ø¼Ò °³¼ö¸¸Å­ OUTPUT( ) ÇÔ¼ö È£ÃâÀ» ¹İº¹
-	for(i=0; i<MAX_SIZE; i++)
+	// ë°°ì—´ì˜ ì›ì†Œ ê°œìˆ˜ë§Œí¼ OUTPUT í•¨ìˆ˜ í˜¸ì¶œì„ ë°˜ë³µ
+	for(int i=0; i<MAX_SIZE; i++)
 		OUTPUT(arr[i]);
 
 	return 0;
 }
 
-// Á¤¼ö µ¥ÀÌÅÍ ÇÏ³ª¸¦ Ãâ·ÂÇÏ´Â OUTPUT( ) ÇÔ¼ö Á¤ÀÇ
+// í•¨ìˆ˜ ì •ì˜ : ì •ìˆ˜ ë°ì´í„° í•˜ë‚˜ë¥¼ ì¶œë ¥í•˜ëŠ” OUTPUT í•¨ìˆ˜
 void	OUTPUT(int temp)
 {
 	printf("temp: %d \n", temp );
