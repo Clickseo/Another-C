@@ -1,39 +1,36 @@
 #include <stdio.h>
 
-// ÃÖ´ë ÇĞ»ıÀÇ ¼ö
+// ìµœëŒ€ í•™ìƒì˜ ìˆ˜
 #define MAX_SIZE 10
 
 int main(void)
 {
-	// ¹è¿­ ¼±¾ğ: ÇĞ»ı ¼ºÀûÀ» ÀúÀåÇÒ ¸Ş¸ğ¸® °ø°£ È®º¸
-	int	arr[MAX_SIZE];
-	int	i, sum, max; 
+	// ë°°ì—´ ì„ ì–¸ : í•™ìƒ ì„±ì ì„ ì €ì¥í•  ë©”ëª¨ë¦¬ ê³µê°„ í™•ë³´
+	int	arr[MAX_SIZE], sum, max;
 	double	ave;
 
-	// 10¸íÀÇ ¼ºÀû µ¥ÀÌÅÍ ÀÔ·Â
-	printf("%d°³ÀÇ ¹è¿­ ¿ø¼Ò¸¦ ÀÔ·ÂÇÏ½Ã¿À!!! \n", MAX_SIZE);
-	for(i = 0; i < MAX_SIZE ; i++)
+	// 10ëª…ì˜ ì„±ì  ë°ì´í„° ì…ë ¥
+	printf("%dê°œì˜ ë°°ì—´ ì›ì†Œë¥¼ ì…ë ¥í•˜ì‹œì˜¤!!! \n", MAX_SIZE);
+	for(int i = 0; i < MAX_SIZE ; i++)
 	{
 		printf("arr[%d]: ", i);
-		scanf("%d", &arr[i]);
+		scanf_s("%d", &arr[i]);		// scanf("%d", &arr[i]);
 	}
 
-	// ÃÑÁ¡°ú Æò±Õ ±×¸®°í ÃÖ´ñ°ª °è»ê
+	// ì´ì ê³¼ í‰ê·  ê·¸ë¦¬ê³  ìµœëŒ“ê°’ ê³„ì‚°
 	sum  =  0;
 	max  =  arr[0];
-	for(i=0;  i<MAX_SIZE;  i++)
+	for(int i=0;  i<MAX_SIZE;  i++)
 	{
 		sum  +=  arr[i];
-
 		if(max  <  arr[i])
 			max  =  arr[i];
 	}
 
 	ave  =  (double) sum  /  MAX_SIZE;
 
-	// °è»êµÈ °á°ú Ãâ·Â
-	printf("\n ÃÑÁ¡: %d, Æò±Õ: %.2lf, ÃÖ´ñ°ª: %d \n",
-							sum, ave, max);
+	// ê³„ì‚°ëœ ê²°ê³¼ ì¶œë ¥
+	printf("\n ì´ì : %d, í‰ê· : %.2lf, ìµœëŒ“ê°’: %d \n", sum, ave, max);
 
 	return 0;
 }
