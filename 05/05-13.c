@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 // 최대 학생 수
 #define	 MAX_SIZE 10
@@ -9,14 +8,13 @@ void  GRADE(double *arr, int num, double *sum, double *ave, double *max);
 
 int main (void)
 {
-	int		i;
 	double		arr[MAX_SIZE] = {0};
 	double		sum, ave, max;
 
 	// 최대 학생 수 만큼 성적 데이터 입력
 	printf("%d 명의 학생 점수를 입력하시오... \n", MAX_SIZE);
-	for(i = 0; i < MAX_SIZE; i++)
-		scanf("%lf", arr + i);
+	for(int i = 0; i < MAX_SIZE; i++)
+		scanf_s("%lf", arr + i);	// scanf("%lf", arr + i);
 
 	// 총점과 평균 그리고 최댓값을 구하는 GRADE( ) 함수 호출
 	GRADE(arr, MAX_SIZE, &sum, &ave, &max);
