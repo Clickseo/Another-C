@@ -1,53 +1,54 @@
 #include <stdio.h>
 #define MAX_SIZE 10
 
-int	*Sequential_Search(int *, int, int);
-void	OUTPUT(int *, int);
+// í•¨ìˆ˜ ì›í˜• ì„ ì–¸
+int	*Sequential_Search(int *, int, int);	// 1) ìˆœì°¨ íƒìƒ‰ ì•Œê³ ë¦¬ì¦˜
+void	OUTPUT(int *, int);			// 2) ì „ì²´ ë°°ì—´ ì›ì†Œ ì¶œë ¥
 
 int main(void)
 {
 	int num, *pLoc;
-	int arr[MAX_SIZE]={ 89, 72, 3, 15, 21, 57, 62, 44, 19, 98};
+	int arr[MAX_SIZE]={ 89, 72, 3, 15, 21, 57, 62, 44, 19, 98 };
 
-	// ¹è¿­ÀÇ ¿øº» µ¥ÀÌÅÍ Ãâ·Â
-	printf("µ¥ÀÌÅÍ: ");
+	// ë°°ì—´ì˜ ì›ë³¸ ë°ì´í„° ì¶œë ¥
+	printf("ë°ì´í„° : ");
 	OUTPUT(arr, MAX_SIZE);
 
 	while(1)
 	{
-		printf("\nÃ£°íÀÚ ÇÏ´Â ¼ıÀÚ´Â? (Á¾·á: 0 ): ");
+		printf("\nì°¾ê³ ì í•˜ëŠ” ìˆ«ìëŠ”? (ì¢…ë£Œ: 0 ): ");
 		scanf("%d", &num);
 		fflush(stdin);
 
-		// »ç¿ëÀÚ°¡ 0À» ÀÔ·ÂÇÏ¸é °Ë»ö Á¾·á!!!
+		// ì‚¬ìš©ìê°€ 0ì„ ì…ë ¥í•˜ë©´ ê²€ìƒ‰ ì¢…ë£Œ!!!
 		if(num == 0)	break;
 
-		// ¼øÂ÷ Å½»ö ÇÔ¼ö È£Ãâ
-		// ¿ø¼Ò°³¼ö MAX_SIZEÀÎ ¹è¿­ arr¿¡¼­ µ¥ÀÌÅÍ numÀ» °Ë»ö
+		// ìˆœì°¨ íƒìƒ‰ í•¨ìˆ˜ í˜¸ì¶œ
+		// ì›ì†Œê°œìˆ˜ MAX_SIZEì¸ ë°°ì—´ arrì—ì„œ ë°ì´í„° numì„ ê²€ìƒ‰
 		pLoc = Sequential_Search(arr, MAX_SIZE, num);
 
-		// Å½»ö ½ÇÆĞ: Sequential_Search ÇÔ¼öÀÇ ¹İÈ¯ °ªÀÌ NULL
+		// íƒìƒ‰ ì‹¤íŒ¨: Sequential_Search í•¨ìˆ˜ì˜ ë°˜í™˜ ê°’ì´ NULL
 		if(pLoc == NULL)
-			printf("%3d´Â Á¸ÀçÇÏÁö ¾Ê´Â ¼ö ÀÔ´Ï´Ù.\n", num);
+			printf("%3dëŠ” ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ìˆ˜ ì…ë‹ˆë‹¤.\n", num);
 		else
-			printf("°Ë»ö µ¥ÀÌÅÍ: %3d ¹øÂ° ¿ø¼Ò %d \n", 
+			printf("ê²€ìƒ‰ ë°ì´í„°: %3d ë²ˆì§¸ ì›ì†Œ %d \n", 
 						pLoc - arr + 1, num);
 	}
-	printf("\n...°Ë»ö Á¾·á... \n");
+	printf("\n...ê²€ìƒ‰ ì¢…ë£Œ... \n");
 
 	return 0;
 }
 
-// ¼øÂ÷ Å½»ö: n °³ÀÇ ¹è¿­¿ø¼Ò¿¡¼­ num °ªÀ» °Ë»ö
-int  *Sequential_Search(int *pArr, int n, int num)
+// ìˆœì°¨ íƒìƒ‰ : num ê°œì˜ ë°°ì—´ì›ì†Œì—ì„œ num ê°’ì„ ê²€ìƒ‰
+int  *Sequential_Search(int *pArr, int num, int key)
 {
-	int	i, *pLoc = NULL;
+	int	*pLoc = NULL;
 
-	// n °³ÀÇ ¹è¿­ ¿ø¼Ò¸¸Å­ ¿øÇÏ´Â µ¥ÀÌÅÍ¸¦ Å½»ö
-	for(i = 0; i < n; i++)
+	// n ê°œì˜ ë°°ì—´ ì›ì†Œë§Œí¼ ì›í•˜ëŠ” ë°ì´í„°ë¥¼ íƒìƒ‰
+	for(int i = 0; i < num; i++)
 	{
-		// Ã£°íÀÚ ÇÏ´Â µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏ´Â °æ¿ì...
-		if(num == *(pArr + i))	// if(num == arr[i])
+		// ì°¾ê³ ì í•˜ëŠ” ë°ì´í„°ê°€ ì¡´ì¬í•˜ëŠ” ê²½ìš°...
+		if(key == *(pArr + i))		// if(num == arr[i])
 		{
 			pLoc = pArr + i;	// pLoc = &arr[i];
 			break;
@@ -57,12 +58,10 @@ int  *Sequential_Search(int *pArr, int n, int num)
 	return  pLoc;
 }
 
-// n °³ÀÇ ¹è¿­ ¿ø¼Ò ÀüÃ¼ Ãâ·Â
-void OUTPUT(int *pArr, int n)
+// ë°°ì—´ ì›ì†Œ ì „ì²´ ì¶œë ¥
+void OUTPUT(int *pArr, int num)
 {
-	int	i;
-
-	for(i = 0; i < n; i++)
+	for(int i = 0; i < n; i++)
 		printf("%3d", *(pArr + i));
 	printf("\n");
 
