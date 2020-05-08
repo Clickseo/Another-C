@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ÃÖ´ë ÇĞ»ı ¼ö
+// ìµœëŒ€ í•™ìƒ ìˆ˜
 #define	 MAX_SIZE 10
 
-// ÃÑÁ¡°ú Æò±Õ ±×¸®°í ÃÖ´ñ°ªÀ» ±¸ÇÏ´Â ÇÔ¼ö ¿øÇü ¼±¾ğ
-void  GRADE(double *arr, int n, 
-		double *sum, double *ave, double *max);
+// í•¨ìˆ˜ ì›í˜• : ì´ì ê³¼ í‰ê·  ê·¸ë¦¬ê³  ìµœëŒ€ê°’ì„ êµ¬í•˜ëŠ” í•¨ìˆ˜
+void  GRADE(double *arr, int num, double *sum, double *ave, double *max);
 
 int main (void)
 {
@@ -14,44 +13,40 @@ int main (void)
 	double		arr[MAX_SIZE] = {0};
 	double		sum, ave, max;
 
-	// ÃÖ´ë ÇĞ»ı ¼ö ¸¸Å­ ¼ºÀû µ¥ÀÌÅÍ ÀÔ·Â
-	printf("%d ¸íÀÇ ÇĞ»ı Á¡¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À... \n", MAX_SIZE);
+	// ìµœëŒ€ í•™ìƒ ìˆ˜ ë§Œí¼ ì„±ì  ë°ì´í„° ì…ë ¥
+	printf("%d ëª…ì˜ í•™ìƒ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤... \n", MAX_SIZE);
 	for(i = 0; i < MAX_SIZE; i++)
 		scanf("%lf", arr + i);
 
-	// ÃÑÁ¡°ú Æò±Õ ±×¸®°í ÃÖ´ñ°ªÀ» ±¸ÇÏ´Â GRADE( ) ÇÔ¼ö È£Ãâ
+	// ì´ì ê³¼ í‰ê·  ê·¸ë¦¬ê³  ìµœëŒ“ê°’ì„ êµ¬í•˜ëŠ” GRADE( ) í•¨ìˆ˜ í˜¸ì¶œ
 	GRADE(arr, MAX_SIZE, &sum, &ave, &max);
 
-	// °è»êµÈ ¼ºÀû °á°ú Ãâ·Â
-	printf("\n ¹è¿­ÀÇ ¸Ş¸ğ¸® Å©±â: %d ¹ÙÀÌÆ® \n\n", sizeof(arr));
-	printf("ÇĞ »ı ¼ö: %d \n", MAX_SIZE);
-	printf("ÃÑ    ÇÕ: %.2lf \n", sum);
-	printf("Æò    ±Õ: %.2lf \n", ave);
-	printf("ÃÖ ´ë °ª: %.2lf \n", max);
+	// ê³„ì‚°ëœ ì„±ì  ê²°ê³¼ ì¶œë ¥
+	printf("\n ë°°ì—´ì˜ ë©”ëª¨ë¦¬ í¬ê¸°: %d ë°”ì´íŠ¸ \n\n", sizeof(arr));
+	printf("í•™ ìƒ ìˆ˜: %d \n", MAX_SIZE);
+	printf("ì´    í•©: %.2lf \n", sum);
+	printf("í‰    ê· : %.2lf \n", ave);
+	printf("ìµœ ëŒ€ ê°’: %.2lf \n", max);
 
 	return 0;
 }
 
-// ÃÑÁ¡°ú Æò±Õ ±×¸®°í ÃÖ´ñ°ªÀ» ±¸ÇÏ´Â ÇÔ¼ö Á¤ÀÇ
-void  GRADE(double *p, int n, 
-	double *pSum, double *pAve, double *pMax)
+// í•¨ìˆ˜ ì •ì˜ : ì´ì ê³¼ í‰ê·  ê·¸ë¦¬ê³  ìµœëŒ€ê°’ì„ êµ¬í•˜ëŠ” í•¨ìˆ˜
+void  GRADE(double *p, int num, double *pSum, double *pAve, double *pMax)
 {
-	int	i;
-
 	*pSum  =  0;					// sum = 0;
 	*pMax  =  *p;					// max = arr[0];
 
-	// n ¸í¿¡ ÇĞ»ı¿¡ ´ëÇÑ ÃÑÁ¡°ú ÃÖ´ñ°ª
-	for(i = 0; i < n; i++)
+	// num ëª…ì˜ í•™ìƒì— ëŒ€í•œ ì´ì ê³¼ ìµœëŒ€ê°’ ê³„ì‚°
+	for(int i = 0; i < num; i++)
 	{
 		*pSum += *(p+i);			// sum += arr[i];
-
 		if(*pMax < *(p+i))			// if(max<arr[i])
 			*pMax = *(p+i);
 	}
 
-	// n ¸íÀÇ ÇĞ»ı¿¡ ´ëÇÑ Æò±Õ
-	*pAve  =  *pSum  /  n;			// ave = sum / n;
+	// num ëª…ì˜ í•™ìƒì— ëŒ€í•œ í‰ê·  ê³„ì‚°
+	*pAve  =  *pSum  /  num;			// ave = sum / num;
 
 	return;
 }
