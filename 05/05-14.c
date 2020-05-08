@@ -1,60 +1,58 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>		// rand, srand
 #include <time.h>
 
-// ¹è¿­ÀÇ ÃÖ´ë ¿ø¼Ò °³¼ö
+// ë°°ì—´ì˜ ìµœëŒ€ ì›ì†Œ ê°œìˆ˜
 #define MAX_SIZE 5
 
-// ÇÔ¼ö ¿øÇü ¼±¾ğ: ¼±ÅÃ Á¤·Ä ¾Ë°í¸®Áò, µÎ Á¤¼ö ±³È¯ ÇÔ¼ö 
-// ±×¸®°í ¹è¿­ ÀüÃ¼ ¿ø¼Ò¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
-void Selection_Sort(int *, int);
-void SWAP(int *, int *);
-void OUTPUT(int *, int);
+// í•¨ìˆ˜ ì›í˜• ì„ ì–¸
+void Selection_Sort(int *, int);	// 1) ì„ íƒ ì •ë ¬ ì•Œê³ ë¦¬ì¦˜ í•¨ìˆ˜
+void SWAP(int *, int *);		// 2) ì›ì†Œ êµí™˜ í•¨ìˆ˜
+void OUTPUT(int *, int);		// 3) ì „ì²´ ë°°ì—´ ì›ì†Œ ì¶œë ¥ í•¨ìˆ˜
 
 int main (void)
 {
-	int	i, arr[MAX_SIZE] = {0};
+	int	arr[MAX_SIZE] = {0};
 
-	// ÀÓÀÇÀÇ ³­¼ö¸¦ ¹è¿­¿¡ ÀúÀå: 0 ~ 99 »çÀÌÀÇ Á¤¼ö
+	// ì„ì˜ì˜ ë‚œìˆ˜ë¥¼ ë°°ì—´ì— ì €ì¥ : 0 ~ 99 ì‚¬ì´ì˜ ì •ìˆ˜
 	srand(time(NULL));
-	for(i = 0; i < MAX_SIZE; i++) 
+	for(int i = 0; i < MAX_SIZE; i++) 
 		*(arr + i) = rand() % 100;
 
-	printf("Á¤·ÄµÇÁö ¾ÊÀº ¹è¿­: ");
+	printf("ì •ë ¬ë˜ì§€ ì•Šì€ ë°°ì—´: ");
 	OUTPUT(arr, MAX_SIZE);
 
-	// ÀÓÀÇÀÇ ¼ø¼­·Î ±¸¼ºµÈ ¹è¿­À» Á¤·ÄÇÏ´Â ¼±ÅÃ Á¤·Ä ÇÔ¼ö È£Ãâ
+	// í•¨ìˆ˜ í˜¸ì¶œ : ì„ì˜ì˜ ìˆœì„œë¡œ êµ¬ì„±ëœ ë°°ì—´ì„ ì •ë ¬(ì„ íƒ ì •ë ¬ í•¨ìˆ˜)
 	Selection_Sort(arr, MAX_SIZE);
 
-	printf("\nÁ¤·ÄµÈ ¹è¿­: ");
+	printf("\nì •ë ¬ ëœ ë°°ì—´: ");
 	OUTPUT(arr, MAX_SIZE);
 
 	return 0;
 }
 
-// ¼±ÅÃ Á¤·Ä: °¡Àå ÀÛÀº °ªÀ» ¾ÕÀ¸·Î º¸³¿
-void   Selection_Sort(int *pArr, int n) 
+// ì„ íƒ ì •ë ¬ : ê°€ì¥ ì‘ì€ ê°’ì„ ì•ìœ¼ë¡œ ë³´ëƒ„
+void   Selection_Sort(int *pArr, int num) 
 {
-	int	i, j, *pSm;
-
-	for(i = 0; i < n; i++)
+	int	*pSm;
+	for(int i = 0; i < num; i++)
 	{
-		// i ~ n-1¹øÂ° »çÀÌÀÇ ¿ø¼Ò Áß i¹øÂ° ¿ø¼Ò¸¦ ÃÖ¼Ú°ªÀ¸·Î °¡Á¤
+		// i ~ n-1 ë²ˆì§¸ ì‚¬ì´ì˜ ì›ì†Œ ì¤‘ i ë²ˆì§¸ ì›ì†Œë¥¼ ìµœì†Œê°’ìœ¼ë¡œ ê°€ì •
 		pSm = pArr + i;		// pSm = &arr[i];
 
-		// i¹øÂ°ºÎÅÍ n-1¹øÂ° ¿ø¼Ò¿¡¼­ ÃÖ¼Ú°ªÀÇ À§Ä¡(ÁÖ¼Ò) Å½»ö
-		for(j = i; j < n; j++)
+		// i ë²ˆì§¸ë¶€í„° n-1 ë²ˆì§¸ ì›ì†Œì—ì„œ ìµœì†Œê°’ì˜ ìœ„ì¹˜(ì£¼ì†Œ) íƒìƒ‰
+		for(int j = i; j < n; j++)
 			if(*pSm > *(pArr + j))
 				pSm = pArr + j;
 		
-		// °¡Àå ÀÛÀº °ªÀ» ¼±ÅÃ: ÇöÀç °ª°ú ±³È¯
+		// ê°€ì¥ ì‘ì€ ê°’ì„ ì„ íƒ : í˜„ì¬ ê°’ê³¼ êµí™˜
 		SWAP(pSm, pArr + i);
 	}
 
 	return;
 }
 
-// µÎ Á¤¼ö¸¦ ±³È¯ÇÏ´Â ÇÔ¼ö
+// ì›ì†Œ êµí™˜ : ë‘ ì •ìˆ˜ë¥¼ êµí™˜í•˜ëŠ” í•¨ìˆ˜
 void  SWAP(int *pa, int *pb)
 {
 	int	temp;
@@ -66,12 +64,10 @@ void  SWAP(int *pa, int *pb)
 	return;
 }
 
-// n °³ÀÇ ¹è¿­ ¿ø¼Ò¸¦ ÀüÃ¼ Ãâ·ÂÇÏ´Â ÇÔ¼ö
-void  OUTPUT(int *pArr, int n)
+// ì „ì²´ ë°°ì—´ ì›ì†Œ ì¶œë ¥ : num ê°œì˜ ë°°ì—´ ì›ì†Œë¥¼ ì „ì²´ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
+void  OUTPUT(int *pArr, int num)
 {
-	int	i;
-
-	for(i = 0; i < n; i++)
+	for(int i = 0; i < n; i++)
 		printf("%3d", *(pArr + i));
 	printf("\n");
 
