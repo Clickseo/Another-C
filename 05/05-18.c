@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 #define MAX_SIZE 10
 
-int	*BinarySearch(int *, int *, int *, int);
-void OUTPUT(int *pArr, int n);
+// í•¨ìˆ˜ ì›í˜• ì„ ì–¸
+int	*BinarySearch(int *, int *, int *, int);	// 1) ì´ì§„ íƒìƒ‰ ì•Œê³ ë¦¬ì¦˜
+void 	OUTPUT(int *pArr, int num);			// 2) ì „ì²´ ë°°ì—´ ì¶œë ¥
 
 int main(void)
 {
@@ -10,59 +12,55 @@ int main(void)
 	int	arr[MAX_SIZE] = { 10, 20, 30, 40, 50,
 					60, 70, 80, 90, 99};
 
-	// ¹è¿­ÀÇ ¿øº» µ¥ÀÌÅÍ Ãâ·Â
-	printf("µ¥ÀÌÅÍ: ");
+	// ë°°ì—´ì˜ ì›ë³¸ ë°ì´í„° ì¶œë ¥
+	printf("ë°ì´í„° : ");
 	OUTPUT(arr, MAX_SIZE);
 
 	while(1)
 	{
-		printf("\nÃ£°íÀÚ ÇÏ´Â µ¥ÀÌÅÍ (°Ë»ö Á¾·á: 0): ");
-		scanf("%d", &num);
+		printf("\nì°¾ê³ ì í•˜ëŠ” ë°ì´í„° (ê²€ìƒ‰ ì¢…ë£Œ: 0): ");
+		scanf_s("%d", &num);		// scanf("%d", &num);
 		fflush(stdin);
 
-		// »ç¿ëÀÚ°¡ 0À» ÀÔ·ÂÇÏ¸é °Ë»ö Á¾·á!!!
-		if(num == 0)	break;
+		// ì‚¬ìš©ìê°€ 0 ì„ ì…ë ¥í•˜ë©´ ê²€ìƒ‰ ì¢…ë£Œ!!!
+		if(num == 0)
+			break;
 
-		// µ¥ÀÌÅÍ °Ë»öÀ» À§ÇÑ ÀÌÁø Å½»ö ÇÔ¼ö È£Ãâ
+		// í•¨ìˆ˜ í˜¸ì¶œ : ë°ì´í„° ê²€ìƒ‰ì„ ìœ„í•œ ì´ì§„ íƒìƒ‰ í•¨ìˆ˜
 		pLoc = BinarySearch(arr, arr, arr+MAX_SIZE-1, num);
 
-		// Å½»ö ½ÇÆĞ: BinarySearch ÇÔ¼öÀÇ ¹İÈ¯ °ªÀÌ NULL
-		if(pLoc == NULL)
-			printf("Á¸ÀçÇÏÁö ¾Ê´Â µ¥ÀÌÅÍ!!! \n");
-		else
-			printf("°Ë»öµÈ µ¥ÀÌÅÍ: %d ¹øÂ° À§Ä¡ %d \n",
-						num, pLoc - arr + 1);
+		// íƒìƒ‰ ì‹¤íŒ¨ : BinarySearch í•¨ìˆ˜ì˜ ë°˜í™˜ ê°’ì´ NULL
+		if(pLoc == NULL)	printf("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ë°ì´í„°!!! \n");
+		else			printf("ê²€ìƒ‰ëœ ë°ì´í„°: %d ë²ˆì§¸ ìœ„ì¹˜ %d \n", num, pLoc - arr + 1);
 	}
 
 	return 0;
 }
 
-// ÀÌÁø Å½»ö: n °³ÀÇ ¹è¿­¿ø¼Ò¿¡¼­ num °ªÀ» °Ë»ö
-int  *BinarySearch(int *pArr, int *pBegin, int *pEnd, int num)
+// ì´ì§„ íƒìƒ‰ ì•Œê³ ë¦¬ì¦˜ : num ê°œì˜ ë°°ì—´ì›ì†Œì—ì„œ key ê°’ì„ ê²€ìƒ‰
+int  *BinarySearch(int *pArr, int *pBegin, int *pEnd, int key)
 {
 	int	*pMid, *pFirst = pBegin, *pLast = pEnd;
 
-	// first > last ÀÌ¸é °Ë»ö Á¾·á: °Ë»ö ½ÇÆĞ
+	// first > last ì´ë©´ ê²€ìƒ‰ ì¢…ë£Œ: ê²€ìƒ‰ ì‹¤íŒ¨
 	while(pFirst <= pLast)
 	{
-		// first ~ last »çÀÌÀÇ Áß°£ ¿ø¼ÒÀÇ À§Ä¡(ÁÖ¼Ò) °è»ê
+		// first ~ last ì‚¬ì´ì˜ ì¤‘ê°„ ì›ì†Œì˜ ìœ„ì¹˜(ì£¼ì†Œ) ê³„ì‚°
 		pMid = pFirst + (pLast - pFirst) / 2;
 
-		if(*pMid == num)		return  pMid;
-		else if(*pMid > num)		pLast = pMid - 1;
-		else if(*pMid < num)		pFirst = pMid + 1;
+		if(*pMid == key)		return  pMid;
+		else if(*pMid > key)		pLast = pMid - 1;
+		else if(*pMid < key)		pFirst = pMid + 1;
 	}
 
-	// °Ë»ö ½ÇÆĞÇÒ °æ¿ì NULL ¹İÈ¯
+	// ê²€ìƒ‰ ì‹¤íŒ¨í•  ê²½ìš° NULL ë°˜í™˜
 	return  NULL;
 }
 
-// n °³ÀÇ ¹è¿­ ¿ø¼Ò ÀüÃ¼ Ãâ·Â
-void OUTPUT(int *pArr, int n)
+// ë°°ì—´ ì „ì²´ ì›ì†Œ ì¶œë ¥ : num ê°œì˜ ë°°ì—´ ì›ì†Œ ì „ì²´ ì¶œë ¥
+void OUTPUT(int *pArr, int num)
 {
-	int	i;
-
-	for(i = 0; i < n; i++)
+	for(int i = 0; i < num; i++)
 		printf("%3d", *(pArr + i));
 	printf("\n");
 
