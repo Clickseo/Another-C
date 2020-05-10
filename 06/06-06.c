@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(void)
 {
-	char	str[10] = "test";
+	char	str[12] = "test";
 
 	printf("puts  : ");
 	puts(str);
