@@ -3,10 +3,10 @@ int main(void)
 {
 	char	str[1024];
 
-	printf("¹®ÀÚ¿­ ÀÔ·Â : ");
+	printf("ë¬¸ìì—´ ì…ë ¥ : ");
 	fgets(str, sizeof(str), stdin);
 
-	fputs("¹®ÀÚ¿­ Ãâ·Â : ", stdout);
+	fputs("ë¬¸ìì—´ ì¶œë ¥ : ", stdout);
 	fputs(str, stdout);
 
 	return 0;
