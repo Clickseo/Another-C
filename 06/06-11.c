@@ -1,26 +1,29 @@
+
 #include <stdio.h>
 #define MAX_SIZE 1024
-void	OUTPUT_rev(char *);
+
+void	OUTPUT_rev(char*);
+
 int main(void)
 {
 	char	str[MAX_SIZE];
 
-	printf("¹®ÀÚ¿­ ÀÔ·Â: ");	gets(str);
-	printf("¿ª¼ø Ãâ·Â: ");	OUTPUT_rev(str);
+	printf("ë¬¸ìžì—´ ìž…ë ¥: ");	gets_s(str, sizeof(str));
+	printf("ì—­ìˆœ ì¶œë ¥: ");	OUTPUT_rev(str);
 
 	return 0;
 }
 
-void	OUTPUT_rev(char *pStr)
+void	OUTPUT_rev(char* pStr)
 {
-	char	*p = pStr;
+	char* p = pStr;
 
-	// ³Î ¹®ÀÚÀÇ À§Ä¡(ÁÖ¼Ò) Å½»ö
-	while(*p != '\0')		// while(*p)
+	// ë„ ë¬¸ìžì˜ ìœ„ì¹˜(ì£¼ì†Œ) íƒìƒ‰
+	while (*p != '\0')		// while(*p)
 		p++;
 
-	// ³Î ¹®ÀÚ¸¦ Á¦¿ÜÇÑ ¸¶Áö¸· ¹®ÀÚºÎÅÍ ¿ª¼ø Ãâ·Â
-	for(p--; p >= pStr; p--)
+	// ë„ ë¬¸ìžë¥¼ ì œì™¸í•œ ë§ˆì§€ë§‰ ë¬¸ìžë¶€í„° ì—­ìˆœ ì¶œë ¥
+	for (p--; p >= pStr; p--)
 		putchar(*p);
 	putchar('\n');
 
