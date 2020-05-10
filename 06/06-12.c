@@ -1,36 +1,36 @@
 #include <stdio.h>
 #define MAX_SIZE 1024
 
-// ¿µ¹® ´ë¼Ò¹®ÀÚ º¯°æ ÇÔ¼ö ¿øÇü
+// ì˜ë¬¸ ëŒ€ì†Œë¬¸ì ë³€ê²½ í•¨ìˆ˜ ì›í˜•
 void  String_Change(char *to_string, const char *from_string);
 
 int main(void)
 {
 	char	str[MAX_SIZE], res[MAX_SIZE];
 
-	printf("¹®ÀÚ¿­ ÀÔ·Â : ");
-	gets(str);
+	printf("ë¬¸ìì—´ ì…ë ¥ : ");
+	gets_s(str, sizeof(str));		// gets(str);
 
 	String_Change(res,  str);
 
-	printf("º¯È¯µÈ ¹®ÀÚ¿­ : %s \n", res);
+	printf("ë³€í™˜ëœ ë¬¸ìì—´ : %s \n", res);
 
 	return 0;
 }
 
-// ¼Ò¹®ÀÚ¸¦ ´ë¹®ÀÚ·Î, ´ë¹®ÀÚ¸¦ ¼Ò¹®ÀÚ·Î º¯°æÇÏ´Â ÇÔ¼ö
+// ì†Œë¬¸ìë¥¼ ëŒ€ë¬¸ìë¡œ, ëŒ€ë¬¸ìë¥¼ ì†Œë¬¸ìë¡œ ë³€ê²½í•˜ëŠ” í•¨ìˆ˜
 void  String_Change(char  *to_str,  const  char  *from_str)
 {
-	// ¹®ÀÚ¿­ÀÇ ³¡ÀÌ ¾Æ´Ñ ³Î ¹®ÀÚ°¡ ¾Æ´Ò µ¿¾È...
+	// ë¬¸ìì—´ì˜ ëì´ ì•„ë‹Œ ë„ ë¬¸ìê°€ ì•„ë‹ ë™ì•ˆ...
 	while(*from_str)
 	{
-		// ¿µ¹® ¼Ò¹®ÀÚÀÎ °æ¿ì : ´ë¹®ÀÚ·Î º¯°æ
+		// ì˜ë¬¸ ì†Œë¬¸ìì¸ ê²½ìš° : ëŒ€ë¬¸ìë¡œ ë³€ê²½
 		if (('a' <= *from_str) && (*from_str <= 'z'))
 			*to_str = *from_str - 32;
-		// ¿µ¹® ´ë¹®ÀÚÀÎ °æ¿ì : ¼Ò¹®ÀÚ·Î º¯°æ
+		// ì˜ë¬¸ ëŒ€ë¬¸ìì¸ ê²½ìš° : ì†Œë¬¸ìë¡œ ë³€ê²½
 		else if (('A' <= *from_str) && (*from_str <= 'Z'))
 			*to_str = *from_str + 32;
-		// ³ª¸ÓÁö ¹®ÀÚ´Â ±×´ë·Î Ãâ·Â
+		// ë‚˜ë¨¸ì§€ ë¬¸ìëŠ” ê·¸ëŒ€ë¡œ ì¶œë ¥
 		else
 			*to_str = *from_str;
 
@@ -38,7 +38,7 @@ void  String_Change(char  *to_str,  const  char  *from_str)
 		to_str++;
 	}
 
-	// ¹®ÀÚ¿­ÀÇ ³¡À» ÀÇ¹ÌÇÏ´Â ³Î ¹®ÀÚ Ãß°¡
+	// ë¬¸ìì—´ì˜ ëì„ ì˜ë¯¸í•˜ëŠ” ë„ ë¬¸ì ì¶”ê°€
 	*to_str = '\0';
 
 	return;
