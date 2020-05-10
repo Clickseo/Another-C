@@ -1,21 +1,19 @@
 #include <stdio.h>
 int main(void)
 {
-	char	str[] = "¼­µÎ¿Á 70 80 90 240 80.0";
-
+	char	str[] = "ì„œë‘ì˜¥ 70 80 90 240 80.0";
 	char	name[12];
 	int	kor, eng, math, tot;
 	double	ave;
 
-	sscanf(str, "%s %d %d %d %d %lf", 
-			name, &kor, &eng, &math, &tot, &ave);
+	scanf_s(str, "%s %d %d %d %d %lf", name, sizeof(name), &kor, &eng, &math, &tot, &ave);
 
-	printf("ÀÌ¸§: %5s \n", name);
-	printf("±¹¾î: %5d \n", kor);
-	printf("¿µ¾î: %5d \n", eng);
-	printf("¼öÇĞ: %5d \n", math);
-	printf("ÃÑÁ¡: %5d \n", tot);
-	printf("Æò±Õ: %5.2lf \n", ave);
+	printf("ì´ë¦„ : %5s \n", name);
+	printf("êµ­ì–´ : %5d \n", kor);
+	printf("ì˜ì–´ : %5d \n", eng);
+	printf("ìˆ˜í•™ : %5d \n", math);
+	printf("ì´ì  : %5d \n", tot);
+	printf("í‰ê·  : %5.2lf \n", ave);
 
 	return 0;
 }
