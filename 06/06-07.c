@@ -6,7 +6,7 @@ int main(void)
 	int	kor, eng, math, tot;
 	double	ave;
 
-	scanf_s(str, "%s %d %d %d %d %lf", name, sizeof(name), &kor, &eng, &math, &tot, &ave);
+	sscanf_s(str, "%s %d %d %d %d %lf", name, sizeof(name), &kor, &eng, &math, &tot, &ave);
 
 	printf("이름 : %5s \n", name);
 	printf("국어 : %5d \n", kor);
