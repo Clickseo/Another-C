@@ -1,24 +1,32 @@
 #include <stdio.h>
 int main(void)
 {
-	char	stu_ID[15];		// ÇĞ¹ø
-	char	name[12];		// ÀÌ¸§
-	char	gender[5];		// ¼ºº°
-	char	tel[15];		// ¿¬¶ôÃ³
-	char	addr[50];		// ÁÖ¼Ò
+	char	stu_ID[16];	// í•™ë²ˆ
+	char	name[12];	// ì´ë¦„
+	char	gender[8];	// ì„±ë³„
+	char	tel[16];	// ì—°ë½ì²˜
+	char	addr[52];	// ì£¼ì†Œ
 
-	printf("ÇĞ  ¹ø : ");				gets(stu_ID);
-	printf("ÀÌ  ¸§ : ");				gets(name);
-	printf("¼º  º° (¿¹: ³²ÀÚ) : ");		gets(gender);
-	printf("¿¬¶ôÃ³ (¿¹: 010-1234-5678) : ");	gets(tel);
-	printf("ÁÖ  ¼Ò : ");				gets(addr);
+	// í•™ìƒ ì •ë³´ ì…ë ¥
+	printf("í•™  ë²ˆ : ");	gets_s(stu_ID, sizeof(stu_ID));
+	printf("ì´  ë¦„ : ");	gets_s(name, sizeof(name));
 
-	printf("\n ### ÀÔ·Â Á¤º¸ ### \n\n");
-	printf("ÇĞ   ¹ø : ");				puts(stu_ID);
-	printf("ÀÌ   ¸§ : ");				puts(name);
-	printf("¼º   º° : ");				puts(gender);
-	printf("¿¬¶ôÃ³ : ");				puts(tel); 
-	printf("ÁÖ   ¼Ò : ");				puts(addr);
+	printf("ì„±  ë³„ (ì˜ˆ: ë‚¨ì) : ");
+	gets_s(gender, sizeof(gender));
+
+	printf("ì—°ë½ì²˜ (ì˜ˆ: 010-1234-5678) : ");
+	gets_s(tel, sizeof(gender));
+
+	printf("ì£¼  ì†Œ : ");
+	gets_s(addr, sizeof(gender));
+
+	// í•™ìƒ ì •ë³´ ì¶œë ¥
+	printf("\n ### ì…ë ¥ ì •ë³´ ### \n\n");
+	printf("í•™   ë²ˆ : ");	puts(stu_ID);
+	printf("ì´   ë¦„ : ");	puts(name);
+	printf("ì„±   ë³„ : ");	puts(gender);
+	printf("ì—°ë½ì²˜ : ");	puts(tel);
+	printf("ì£¼   ì†Œ : ");	puts(addr);
 
 	return 0;
 }
