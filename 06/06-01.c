@@ -3,10 +3,10 @@ int main(void)
 {
 	char	str[1024];
 
-	printf("¹®ÀÚ¿­ ÀÔ·Â : ");
-	scanf("%s", str);
+	printf("ë¬¸ìì—´ ì…ë ¥ : ");
+	scanf_s("%s", str, sizeof(str));		// scanf("%s", str);
 
-	printf("¹®ÀÚ¿­ Ãâ·Â : %s \n", str);
+	printf("ë¬¸ìì—´ ì¶œë ¥ : %s \n", str);
 
 	return 0;
 }
