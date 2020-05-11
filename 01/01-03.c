@@ -1,18 +1,23 @@
 #include <stdio.h>
 int main(void)
 {
-	// ³â¿ùÀÏÀ» ÀúÀåÇÒ º¯¼ö ¼±¾ğ
+	// ë…„ì›”ì¼ì„ ì €ì¥í•  ë³€ìˆ˜ ì„ ì–¸
 	int	year;
 	int	month;
 	int	day;
 
-	// »ç¿ëÀÚ·ÎºÎÅÍ ³â¿ùÀÏÀ» ÀÔ·Â Ã³¸®
-	printf("³â : ");	scanf("%d", &year);
-	printf("¿ù : ");	scanf("%d", &month);
-	printf("ÀÏ : ");	scanf("%d", &day);
+	// ì‚¬ìš©ìë¡œë¶€í„° ë…„ì›”ì¼ì„ ì…ë ¥ ì²˜ë¦¬
+	printf("ë…„ : ");
+	scanf_s("%d", &year);		// scanf("%d", &year);
+	
+	printf("ì›” : ");
+	scanf_s("%d", &month);		// scanf("%d", &month);
+	
+	printf("ì¼ : ");
+	scanf_s("%d", &day);		// scanf("%d", &day);
 
-	// ÀÔ·Â ¹ŞÀº ¿¬¿ùÀÏÀ» Ãâ·Â
-	printf("¿À´ÃÀÇ ³¯Â¥ : %d-%d-%d \n", year, month, day);
+	// ì…ë ¥ ë°›ì€ ì—°ì›”ì¼ì„ ì¶œë ¥
+	printf("ì˜¤ëŠ˜ì˜ ë‚ ì§œ : %d-%d-%d \n", year, month, day);
 
 	return 0;
 }
