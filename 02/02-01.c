@@ -1,3 +1,4 @@
+// 부동 소수점 오차 : 컴퓨터는 근사치로 실수를 표현한다.
 #include <stdio.h>
 int main(void)
 {
