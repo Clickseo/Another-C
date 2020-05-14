@@ -2,6 +2,7 @@
 int main(void)
 {
 	// 변수 선언 : 년월일을 저장할 메모리 공간
+	// int	year, month, day;
 	int	year;
 	int	month;
 	int	day;
