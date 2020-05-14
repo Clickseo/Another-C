@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main(void)
 {
-	// 년월일을 저장할 변수 선언
+	// 변수 선언 : 년월일을 저장할 메모리 공간
 	int	year;
 	int	month;
 	int	day;
 
-	// 사용자로부터 년월일을 입력 처리
+	// 사용자 입력 : 년월일
 	printf("년 : ");
 	scanf_s("%d", &year);		// scanf("%d", &year);
 	
@@ -16,7 +16,7 @@ int main(void)
 	printf("일 : ");
 	scanf_s("%d", &day);		// scanf("%d", &day);
 
-	// 입력 받은 연월일을 출력
+	// 결과 출력 : 입력 받은 년월일 출력
 	printf("오늘의 날짜 : %d-%d-%d \n", year, month, day);
 
 	return 0;
