@@ -1,3 +1,4 @@
+// 64bits(8bytes) 정수형 : long long int
 #include <stdio.h>
 int main(void)
 {
