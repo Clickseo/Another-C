@@ -1,15 +1,17 @@
+// 임의의 정수(10진수)를 2진수 형태로 변환하여 출력
 #include <stdio.h>
 int main(void)
 {
-	int	i, size, state, num;
+	_Bool	state;
+	int	num, size;
 
 	printf("임의의 정수 입력 : ");
 	scanf_s("%d", &num);		// scanf("%d", &num);
 
-	// 주어진 자료형이 할당 받은 총 비트 계산
+	// 자료형(int)의 총 비트 계산
 	size = sizeof(int) * 8;
-
-	for(i=1; i<=size; i++)
+	
+	for(int i=1; i<=size; i++)
 	{
 		// 각 자리의 비트가 1또는 0인지 판단
 		state  =  num  >>  (size  -  i)  &  1;
