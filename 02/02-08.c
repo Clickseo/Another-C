@@ -1,5 +1,8 @@
 #include <stdio.h>
+
+// 매크로 상수
 #define PI 3.14159
+
 int main(void)
 { 
 	int	r = 10;			// r : 원의 반지름
