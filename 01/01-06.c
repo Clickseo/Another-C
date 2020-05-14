@@ -1,3 +1,4 @@
+// 64bits 정수형 : 8bytes
 #include <stdio.h>
 int main(void)
 {
