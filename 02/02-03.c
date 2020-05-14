@@ -6,7 +6,7 @@ int main(void)
 	float	f = 10.5;
 	double	res;
 
-	res = ch + i + f;
+	res = ch + i + f;		// (자동) 형 변환
 
 	printf("res : %.2f \n", res);	// 85.50
 
