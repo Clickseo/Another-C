@@ -1,4 +1,4 @@
-// 64bits 정수형 : 8bytes
+// 64bits(8bytes) 정수형 : __int64
 #include <stdio.h>
 int main(void)
 {
