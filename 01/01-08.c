@@ -1,4 +1,4 @@
-// 다양한 정수형
+// 다양한 정수형의 메모리 크기
 #include <stdio.h>
 int main(void)
 {
