@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 매크로 상수
+// 매크로 상수 : 원주율
 #define PI 3.14159
 
 int main(void)
