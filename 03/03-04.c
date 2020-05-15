@@ -8,8 +8,7 @@
 #include <stdio.h>
 int main(void)
 {
-	// 포인터형 변수의 자료형 : unsigned int
-	int	*p = 10;
+	int	*p = 10;	// warning C4047: '초기화 중': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
 
 	// 프로그램 실행 시 Segmentation Fault 발생
 	// 포인터형 변수가 저정하고 있는 데이터 10을 메모리 주소 10번지로 처리
