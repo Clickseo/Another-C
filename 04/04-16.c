@@ -25,5 +25,6 @@ int	DIV(int a, int b)	// DIV 함수 내부의 지역 변수 a와 b
 
 	printf("몫 : %d, 나머지 : %d \n", quot, rem);	// 3, 1
 
+	// 함수는 최대 하나의 값만을 반환할 수 있다.
 	return quot, rem;
 }
