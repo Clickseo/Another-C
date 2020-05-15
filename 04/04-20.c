@@ -2,12 +2,12 @@
 void	OUTPUT(void);
 int main(void)
 {
-	// Áö¿ª º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
+	// ì²« ë²ˆì§¸ ë¸”ë¡ : ì§€ì—­ ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
 	int	a = 10;
 
 	printf("a : %d \n", a);		// 10
 	{
-		// Áö¿ª º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
+		// ë‘ ë²ˆì§¸ ë¸”ë¡ : ì§€ì—­ ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
 		int	a = 20;
 		printf("a : %d \n", a);	// 20
 	}
@@ -20,7 +20,8 @@ int main(void)
 
 void	OUTPUT(void)
 {
-	// Áö¿ª º¯¼ö ¼±¾ð ¹× Ãâ·Â
+	// OUTPUT í•¨ìˆ˜ : ì§€ì—­ ë³€ìˆ˜ ì„ ì–¸ ë° ì¶œë ¥
 	int	a;
-	printf("a : %d \n", a);	// ¾²·¹±â °ª
+	
+	printf("a : %d \n", a);	// ì“°ë ˆê¸° ê°’
 }
