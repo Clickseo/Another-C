@@ -4,10 +4,10 @@ int main(void)
 {
 	int	a = 10;
 	
-	char	*pc = &a;
+	char	*pc = &a;	// warning C4133: '초기화 중': 'int *'과(와) 'char *' 사이의 형식이 호환되지 않습니다.
 	int	*pi = &a;
-	float	*pf = &a;
-	double	*pd = &a;
+	float	*pf = &a;	// warning C4133: '초기화 중': 'int *'과(와) 'float *' 사이의 형식이 호환되지 않습니다.
+	double	*pd = &a;	// warning C4133: '초기화 중': 'int *'과(와) 'double *' 사이의 형식이 호환되지 않습니다.
 
 	// 피연산자가 포인형 변수와 정수형 상수인 경우 +1의 의미
 	// (가정) &a가 1000번지일 경우...
