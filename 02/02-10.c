@@ -4,7 +4,7 @@ int main(void)
 	unsigned char	ch;
 	int		i = 128;
 
-	ch = i;					// 데이터 손실 발생(4bytes --> 1byte)
+	ch = i;		// 데이터 손실 발생(4bytes --> 1byte)
 
 	// i  --> |0000 0000|0000 0000|0000 0000|1000 0000|
 	// ch --> |1000 0000|
