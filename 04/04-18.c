@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+// 함수 원형 선언 : DIV 함수 -- 몫과 나머지 계산
 void	DIV(int, int, int *, int *);
 int main(void)
 {
@@ -12,7 +14,8 @@ int main(void)
 	return 0;
 }
 
-void	DIV(int a, int b, int *pQuot, int *pRem)
+// 함수 정의 : DIV 함수 -- 몫과 나머지 계산
+void	DIV(int a, int b, int *pQuot, int *pRem)	// rQuot = &quot, pRem = &rem
 {
 	*pQuot = a / b;		// quot = a / b;
 	*pRem = a % b;		// rem = a % b;
