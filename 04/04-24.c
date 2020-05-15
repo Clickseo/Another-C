@@ -1,3 +1,4 @@
+// 레지스터 변수
 #include <stdio.h>
 int main(void)
 {
