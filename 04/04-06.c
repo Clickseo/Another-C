@@ -1,15 +1,17 @@
 #include <stdio.h>
 
-// void OUTPUT(int);
-void OUTPUT(int num);
+// 함수 원형 선언 : OUTPUT 함수
+void OUTPUT(int num);		// void OUTPUT(int);
 
 int main(void)
 {
+	// 함수 호출 : OUTPUT 함수
 	OUTPUT(5);
 
 	return 0;
 }
 
+// 함수 정의 : OUTPUT 함수
 void OUTPUT(int  num)
 {
 	int	i;
