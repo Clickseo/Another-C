@@ -21,7 +21,7 @@ void  SWAP(int  *pa,  int  *pb)		// pa = &a, pb = &b
 {
 	int	temp;
 
-	temp = *pa;		// temp = a;
-	*pa = *pb;		// a = b;
-	*pb = temp;		// b = temp;
+	temp = *pa;		// temp = a;	<-- main 함수 내부의 지역 변수 a
+	*pa = *pb;		// a = b;	<-- main 함수 내부의 지역 변수 a와 b
+	*pb = temp;		// b = temp;	<-- main 함수 내부의 지역 변수 b
 }
