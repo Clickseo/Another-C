@@ -2,7 +2,7 @@
 void OUTPUT(void);
 
 // 전역 변수 선언 : 프로그램 실행 시 데이터 영역에 할당
-int	a;
+int	a;	// 0으로 자동 초기화
 
 int main(void)
 {
