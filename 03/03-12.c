@@ -1,4 +1,4 @@
-// 포인터 연산
+// 포인터 연산 : 덧셈 연산
 #include <stdio.h>
 int main(void)
 {
