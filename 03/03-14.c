@@ -7,6 +7,7 @@ int main(void)
 	pa = &a;
 	pb = &b;
 
+	// if(a > b)
 	if(*pa > *pb)	max = *pa;		// max = a;
 	else		max = *pb;		// max = b;
 
