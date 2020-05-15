@@ -1,3 +1,4 @@
+// void형 포인터 변수
 #include <stdio.h>
 int main(void)
 {
@@ -5,7 +6,7 @@ int main(void)
 	void	*p = &a;
 
 	printf("임의의 정수 입력 : ");
-	scanf_s("%d", p);			// scanf("%d", p);
+	scanf_s("%d", (int *)p);		// scanf("%d", (int *)p);
 
 	*(int *)p = *(int *)p + 1;		// a = a + 1;
 
