@@ -1,4 +1,4 @@
-// 포인터 연산
+// 포인터 연산 : 사칙 연산
 #include <stdio.h>
 int main(void)
 {
