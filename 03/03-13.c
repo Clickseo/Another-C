@@ -1,3 +1,4 @@
+// 포인터 연산 : 관계 연산자와 비교 연산자 그리고 논리 연산자
 #include <stdio.h>
 int main(void)
 {
