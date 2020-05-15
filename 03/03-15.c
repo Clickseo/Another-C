@@ -12,11 +12,15 @@ int main(void)
 	printf("4개의 정수 입력 : ");
 	scanf_s("%d %d %d %d", pa, pb, pc, pd);		// scanf("%d %d %d %d", pa, pb, pc, pd);
 	
-	if(*pa < *pb)		min = *pa;
-	else			min = *pb;
+	// if(a > b)
+	if(*pa < *pb)		min = *pa;	// min = a;
+	else			min = *pb;	// min = b;
 
-	if(*pc < min)		min = *pc;
-	if(*pd < min)		min = *pd;
+	// if(c < min)
+	if(*pc < min)		min = *pc;	// min = c;
+	
+	// if(d < min)
+	if(*pd < min)		min = *pd;	// min = d;
 
 	printf("최소값 : %d \n", min);
 
