@@ -17,8 +17,7 @@ int main(void)
 }
 
 // SWAP 함수 : 2개의 정수 값을 교환한다.
-void  SWAP(int  a,  int  b)	// SWAP 함수 내부의 지역 변수 a와 b
-{
+void  SWAP(int  a,  int  b) {
 	int	temp;
 
 	temp = a;
