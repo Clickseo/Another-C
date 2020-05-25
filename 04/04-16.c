@@ -3,15 +3,15 @@
 // 함수 원형 선언 : DIV 함수 -- 몫과 나머지를 구하는 함수
 int	DIV(int, int);
 
-int main(void)
-{
-	// main 함수 내부의 지역 변수 a와 b 그리고 quot, rem
-	int	a = 10, b = 3;
-	int	quot, rem;
+int main(void){
+	
+	int	a = 10, b = 3;		// main 함수 내부의 지역 변수 a, b
+	int	quot, rem;		// main 함수 내부의 지역 변수 quot, rem
 
 	quot = DIV(a, b);
 
-	printf("몫 : %d, 나머지 : %d \n", quot, rem);	// 1, ???
+	// error C4700: 초기화되지 않은 'rem' 지역 변수를 사용했습니다.
+	printf("몫 : %d, 나머지 : %d \n", quot, rem);	// 1, ?
 
 	return 0;
 }
