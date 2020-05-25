@@ -3,17 +3,17 @@
 void ADD1(void);
 void ADD2(void);
 
-// 전역 변수
+// 전역변수 : 자동 초기화 -- 0
 int i;
 
 int main(void)
 {
-	// 지역 변수 : 첫 번째 블럭
+	// 지역변수 : 첫 번째 블럭
 	int i = 10;
 	i+=10;
 
 	{
-		// 지역 변수 : 두 번째 블럭
+		// 지역변수 : 두 번째 블럭
 		int i = 100;
 		i-=10;
 
@@ -31,20 +31,13 @@ int main(void)
 	return 0;
 }
 
-void ADD1(void)
-{
-	// 지역 정적 변수
-	static int i = 1000;
-	
+// 지역 정적 변수
+void ADD1(void) {
+	static int i = 1000;	
 	printf("in ADD1() : i = %d\n", i++);
-	
-	return;
 }
 
-void ADD2(void)
-{
-	// 전역 변수 i의 출력과 증가
+// 전역 변수 i 값의 출력과 후위증가
+void ADD2(void) {
 	printf("in ADD2() : i = %d\n", i++);
-	
-	return;
 }
