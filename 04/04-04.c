@@ -9,7 +9,6 @@ int main(void)
 
 // 함수 정의 : void OUTPUT() 함수
 // error C2371: 'OUTPUT' 재정의. 기본 형식이 다릅니다.
-void OUTPUT(void)
-{
+void OUTPUT(void) {
 	printf("Hello World!!! \n");
 }
