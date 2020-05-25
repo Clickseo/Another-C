@@ -22,9 +22,8 @@ int main(void)
 	return 0;
 }
 
-// 함수 정의 : Factorial 함수
-int  Factorial(int  num)
-{
+// 함수 정의 : Factorial 함수 -- 재귀적 용법
+int  Factorial(int  num) {
 	// 재귀 함수의 탈출 조건
 	if(num <= 1)
 		return 1;
