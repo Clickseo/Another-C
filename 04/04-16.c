@@ -16,12 +16,11 @@ int main(void)
 	return 0;
 }
 
-int	DIV(int a, int b)	// DIV 함수 내부의 지역 변수 a와 b
-{
+int	DIV(int a, int b) {
 	int	quot, rem;	// DIV 함수 내부의 지역 변수 quot와 rem
 
-	quot = a / b;	// 몫 계산
-	rem = a % b;	// 나머지 게산
+	quot = a / b;		// 몫 계산
+	rem = a % b;		// 나머지 게산
 
 	printf("몫 : %d, 나머지 : %d \n", quot, rem);	// 3, 1
 
