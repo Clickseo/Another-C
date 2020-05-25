@@ -26,13 +26,11 @@ int main(void)
 }
 
 // 함수 정의 : SUM 함수 -- 3과목에 대한 총점 계산
-int	SUM(int a, int b, int c)
-{
+int	SUM(int a, int b, int c) {
 	return a + b + c;
 }
 
 // AVE 함수 정의 : 3과목에 대한 평균 계산
-double	AVE(int a, int b, int c)
-{
+double	AVE(int a, int b, int c) {
 	return (a + b + c) / 3.0;
 }
