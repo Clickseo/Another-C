@@ -1,7 +1,7 @@
 #include <stdio.h>
 void	OUTPUT(void);
 
-// 전역변수 선언
+// 전역변수 선언 : 자동 초기화 -- 0
 int	a;
 
 int main(void)
