@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void OUTPUT(void);
 
 // 전역변수 선언 : 프로그램 실행 시 데이터 영역에 할당
@@ -20,8 +21,6 @@ int main(void)
 
 void OUTPUT(void) {
 	// 초기화 된 전역변수 출력
-	printf("a : %d \n", a);		// 0
-	
-	// 전역변수의 후위 증가
-	a++;
+	printf("a : %d \n", a);		// 0	
+	a++;				// 전역변수의 후위 증가
 }
