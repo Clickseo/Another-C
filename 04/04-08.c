@@ -8,7 +8,7 @@ int main(void)
 	int	a, b, c, d, max;
 
 	printf("4개의 정수 입력 : ");
-	scanf_("%d %d %d %d", &a, &b, &c, &d);		// scanf("%d %d %d %d", &a, &b, &c, &d);
+	scanf_s("%d %d %d %d", &a, &b, &c, &d);		// scanf("%d %d %d %d", &a, &b, &c, &d);
 
 	// 함수 호출 : MAX 함수 -- 4개의 정수 중 최대값 계산
 	max = MAX(a, b, c, d);
