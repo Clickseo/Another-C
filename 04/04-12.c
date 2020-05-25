@@ -23,12 +23,10 @@ int main(void)
 }
 
 // 함수 정의 : Factorial 함수 -- 재귀적 용법
-int  Factorial(int  num) {
-	// 재귀 함수의 탈출 조건
-	if(num <= 1)
+int  Factorial(int  num) {	
+	if(num <= 1)		// 재귀 함수의 탈출 조건
 		return 1;
 
-	// 재귀 함수 호출
-	// Factorial 함수 내부에서 Factorial 함수 호출
-	return  n * Factorial(num - 1);
+	// 재귀 호출 : Factorial 함수 내부에서 Factorial 함수 호출
+	return  num * Factorial(num - 1);
 }
