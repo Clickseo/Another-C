@@ -12,11 +12,8 @@ int main(void)
 }
 
 // 함수 정의 : OUTPUT 함수
-void OUTPUT(int  num)
-{
-	int	i;
-
-	for(i=1; i<=num; i++)
+void OUTPUT(int  num) {
+	for(int i=1; i<=num; i++)
 		printf("Hello World!!! \n");
 
 	return;
