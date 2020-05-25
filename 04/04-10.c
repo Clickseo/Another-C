@@ -1,3 +1,4 @@
+// 성적 계산 : 3과목의 점수에 대한 총점과 평균 계산
 #include <stdio.h>
 int main(void)
 {
