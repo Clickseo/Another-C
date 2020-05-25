@@ -12,7 +12,6 @@ int main(void)
 }
 
 // 함수 정의 : OUTPUT 함수
-void OUTPUT(void)
-{
+void OUTPUT(void) {
 	printf("Hello World!!! \n");
 }
