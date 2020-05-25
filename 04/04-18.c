@@ -16,8 +16,7 @@ int main(void)
 }
 
 // 함수 정의 : DIV 함수 -- 몫과 나머지 계산
-void	DIV(int a, int b, int *pQuot, int *pRem)	// rQuot = &quot, pRem = &rem
-{
+void	DIV(int a, int b, int *pQuot, int *pRem) {
 	*pQuot = a / b;		// quot = a / b;
 	*pRem = a % b;		// rem = a % b;
 
