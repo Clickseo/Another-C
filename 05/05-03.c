@@ -1,3 +1,4 @@
+// 배열 원소의 색인(index): arr[n] --> arr[0] ~ arr[n-1]
 #include <stdio.h>
 
 #define arrMAXSIZE 10
