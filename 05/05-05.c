@@ -16,7 +16,7 @@ int main(void)
 		scanf_s("%d", &arr[i]);		// scanf("%d", &arr[i]);
 	}
 
-	// 총점과 평균 그리고 최대값 계산
+	// 학생의 성적 계산: 총점과 평균 그리고 최대값 계산
 	sum  =  0;
 	max  =  arr[0];
 	for(int i=0; i<arrMAXSIZE; i++)	{
