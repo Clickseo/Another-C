@@ -1,15 +1,18 @@
+// 배열과 포인터
 #include <stdio.h>
 
-#define MAX_SIZE 3
+#define arrMAXSIZE 3
 
 int main(void)
 {
-	int	arr[MAX_SIZE];
+	int	arr[arrMAXSIZE];
 
-	for(int i=0; i<MAX_SIZE; i++)
+	// &arr[i] == &*(arr+i) == arr+i
+	for(int i=0; i<arrMAXSIZE; i++)
 		scanf_s("%d", arr + i );      // scanf("%d", &arr[i] );
 
-	for(i=0; i<MAX_SIZE; i++)
+	// arr[i] == *(arr+i)
+	for(int i=0; i<arrMAXSIZE; i++)
 		// printf("arr[%d]: %d \n", i, arr[i] );
 		printf("arr[%d]: %d \n", i, *(arr + i) );
 
