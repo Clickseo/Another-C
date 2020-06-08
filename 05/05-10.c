@@ -1,7 +1,7 @@
 // 배열과 함수: 개별 원소 전달
 #include <stdio.h>
 
-#define arrMAXSIZE 5
+#define arrMAXSIZE 3
 
 // 함수 원형: 정수 데이터 하나를 출력하는 OUTPUT 함수
 void	OUTPUT(int);
