@@ -1,3 +1,4 @@
+// 히스토그램 출력
 #include <stdio.h>
 
 #define arrMAXSIZE 10
