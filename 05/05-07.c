@@ -6,7 +6,7 @@
 int main(void)
 {
 	int	arr[arrMAXSIZE] = {10, 20, 30, 40, 50};
-	int	*p;
+	int*	p;
 
 	p = arr;		// p = &arr[0];
 
