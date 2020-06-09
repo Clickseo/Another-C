@@ -1,20 +1,23 @@
+// 다중 포인터와 포인터 배열
 #include <stdio.h>
-#define MAX_SIZE 3
+
+#define arrMAXSIZE 3
+
 int main(void)
 {
-	int	i, a, b, c;
-	int	*arr[MAX_SIZE] = {&a, &b, &c};
-	int	**pArr;
+	int	a, b, c;
+	int	*arr[arrMAXSIZE] = { &a, &b, &c };	// 포인터 배열
+	int	**pArr;					// 이중 포인터
 
 	pArr = arr;		// pArr = &arr[0];
 
-	printf("%3d���� ���� �Է� : ", MAX_SIZE);
-	for(i=0; i<MAX_SIZE; i++)
-		scanf("%d", *(pArr+i));
+	printf("%3d개의 정수 입력: ", arrMAXSIZE);
+	for(int i=0; i<arrMAXSIZE; i++)
+		scanf_s("%d", *(pArr+i));		// scanf_s("%d", arr[i]);
 
-	printf("\n### ��� ��� ### \n");
-	for(i=0; i<MAX_SIZE; i++)
-		printf("%d \n", **(pArr+i));
+	printf("\n### 결과 출력 ### \n");
+	for(int i=0; i<arrMAXSIZE; i++)
+		printf("%d \n", **(pArr+i));		// scanf_s("%d", *arr[i]);
 
 	return 0;
 }
