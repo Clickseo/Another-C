@@ -1,34 +1,34 @@
 #include <stdio.h>
-#define MAX_SIZE 3
+
+#define arrMAXSIZE 3
+
 int main(void)
 {
-	int	i, a, b, c, tot = 0, max = 0;
-	float	ave = 0.0;
-	int	*arr[MAX_SIZE] = {&a, &b, &c};
-	int	**pArr = arr;			// pArr = &arr[0];
+	int	a, b, c, tot = 0, max = 0;
+	double	ave = 0.0;
+	
+	int	*arr[arrMAXSIZE] = { &a, &b, &c };	// í¬ì¸í„° ë°°ì—´
+	int	**pArr = arr;				// pArr = &arr[0];
 
-	// 3°³ÀÇ Á¤¼ö µ¥ÀÌÅÍ ÀÔ·Â
-	printf("%3d°³ÀÇ Á¤¼ö ÀÔ·Â : ", MAX_SIZE);
-	for(i=0; i<MAX_SIZE; i++)
-		scanf("%d", *(pArr+i));
+	// 3ê°œì˜ ì •ìˆ˜ ë°ì´í„° ì…ë ¥
+	printf("%3dê°œì˜ ì •ìˆ˜ ì…ë ¥ : ", arrMAXSIZE);
+	for(int i=0; i<arrMAXSIZE; i++)
+		scanf_s("%d", *(pArr+i));		// scanf_s("%d", arr[i]);
 
-	// ÃÑÁ¡°ú Æò±Õ ±×¸®°í ÃÖ´ñ°ª °è»ê
-	max = **pArr;				// max = *arr[0];
-	for(i=0; i<MAX_SIZE; i++)
-	{
+	// ì´ì ê³¼ í‰ê·  ê·¸ë¦¬ê³  ìµœëŒ“ê°’ ê³„ì‚°
+	max = **pArr;					// max = *arr[0];
+	for(int i=0; i<arrMAXSIZE; i++) {
 		tot += **(pArr+i);			// tot = *arr[i];
-
-		if(max < **(pArr+i))		// if(max < *arr[i])
-			max = **(pArr+i);		// max = *arr[i];
+		if(max < **(pArr+i))			// if(max < *arr[i])
+			max = **(pArr+i);		// 	max = *arr[i];
 	}
+	ave = (float)(tot / arrMAXSIZE);
 
-	ave = (float)(tot / MAX_SIZE);
-
-	// ÃÖÁ¾ °á°ú Ãâ·Â
-	printf("\n### °á°ú Ãâ·Â ### \n");
-	printf("ÃÑ  Á¡ : %8d \n", tot);
-	printf("Æò  ±Õ : %8.2f \n", ave);
-	printf("ÃÖ´ñ°ª : %8d \n", max);
+	// ìµœì¢… ì„±ì  ê²°ê³¼ ì¶œë ¥
+	printf("\n### ì„±ì  ê²°ê³¼ ì¶œë ¥ ### \n");
+	printf("ì´  ì  : %8d \n", tot);
+	printf("í‰  ê·  : %8.2f \n", ave);
+	printf("ìµœëŒ€ê°’ : %8d \n", max);
 
 	return 0;
 }
