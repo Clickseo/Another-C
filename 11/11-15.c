@@ -1,28 +1,23 @@
 #include <stdio.h>
 
-#define ROW 3		// Çà : 2Â÷¿ø ¹è¿­ÀÇ ¿ø¼Ò °³¼ö
-#define COL 5		// ¿­ : °¢ 1Â÷¿ø ¹è¿­ÀÇ ¿ø¼Ò °³¼ö
+#define ROW 3		// í–‰ : 2ì°¨ì› ë°°ì—´ì˜ ì›ì†Œ ê°œìˆ˜
+#define COL 5		// ì—´ : ê° 1ì°¨ì› ë°°ì—´ì˜ ì›ì†Œ ê°œìˆ˜
 
 int main(void)
 {
-	int	i, j;
 	int	table[3][5];
 
-	// 2Â÷¿ø ¹è¿­ÀÇ °¢ Çà°ú ¿­¿¡ µ¥ÀÌÅÍ ÀÔ·Â
-	for(i=0; i<ROW; i++)
-	{
+	// 2ì°¨ì› ë°°ì—´ì˜ ê° í–‰ê³¼ ì—´ì— ë°ì´í„° ì…ë ¥
+	for(int i=0; i<ROW; i++) {
 		printf("%3d : ", i+1);
-
-		for(j=0; j<COL; j++)
-			scanf("%d", &table[i][j]);
+		for(int j=0; j<COL; j++)
+			scanf_s("%d", &table[i][j]);
 	}
 
-	// 2Â÷¿ø ¹è¿­ÀÇ °¢ Çà°ú ¿­ÀÇ µ¥ÀÌÅÍ Ãâ·Â
-	for(i=0; i<ROW; i++)
-	{
+	// 2ì°¨ì› ë°°ì—´ì˜ ê° í–‰ê³¼ ì—´ì˜ ë°ì´í„° ì¶œë ¥
+	for(int i=0; i<ROW; i++) {
 		printf("%3d : ", i+1);
-
-		for(j=0; j<COL; j++)
+		for(int j=0; j<COL; j++)
 			printf("%3d", table[i][j]);
 		printf("\n");
 	}
