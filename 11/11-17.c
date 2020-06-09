@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#define ROW 5		// ÇĞ»ı ¼ö
-#define COL 3		// °ú¸ñ ¼ö
+#define ROW 5		// í•™ìƒ ìˆ˜
+#define COL 3		// ê³¼ëª© ìˆ˜
 
 void	INPUT(int (*)[COL], int, int);
 void	OUTPUT(int (*)[COL], int, int);
@@ -10,79 +10,67 @@ double	AVE(int *, int);
 
 int main(void)
 {
-	// 5Çà 3¿­ÀÇ 2Â÷¿ø ¹è¿­ ¼±¾ğ°ú ÃÊ±âÈ­
+	// 5í–‰ 3ì—´ì˜ 2ì°¨ì› ë°°ì—´ ì„ ì–¸ ë° ì´ˆê¸°í™”
 	int	score[ROW][COL] = {0};
 
-	// ¼ºÀû ÀÔ·Â°ú Ãâ·Â¿¡ ´ëÇÑ ÇÔ¼ö È£Ãâ
+	// í•¨ìˆ˜ í˜¸ì¶œ: ì„±ì  ì…ì¶œë ¥
 	INPUT(score, ROW, COL);
 	OUTPUT(score, ROW, COL);
 
 	return 0;
 }
 
-// 5¸íÀÇ ÇĞ»ı¿¡ ´ëÇÏ¿© 3°ú¸ñÀÇ ¼ºÀû ÀÔ·Â ÇÔ¼ö
-void  INPUT(int (*p)[COL], int row, int col)
-{
+// 5ëª…ì˜ í•™ìƒì— ëŒ€í•˜ì—¬ 3ê³¼ëª©ì˜ ì„±ì  ì…ë ¥ í•¨ìˆ˜
+void  INPUT(int (*p)[COL], int row, int col) {
 	int	i, j;
 
-	printf("%d¸íÀÇ ÇĞ»ıÁ¡¼ö(±¹¾î,¿µ¾î,¼öÇĞ)¸¦ ÀÔ·ÂÇÏ½Ã¿À.\n", ROW);
+	printf("%dëª…ì˜ í•™ìƒì ìˆ˜(êµ­ì–´,ì˜ì–´,ìˆ˜í•™)ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.\n", ROW);
 
-	// ÇĞ»ı ¼ö ¸¸Å­...
+	// í•™ìƒ ìˆ˜ ë§Œí¼...
 	for(i = 0; i < row; i++)
 	{
-		// ÇÑ ÇĞ»ıÀÇ ¼ºÀû(±¹¾î, ¿µ¾î, ¼öÇĞ) ÀÔ·Â
+		// í•œ í•™ìƒì˜ ì„±ì (êµ­ì–´, ì˜ì–´, ìˆ˜í•™) ì…ë ¥
 		printf("%d : ", i+1);
 		for(j = 0; j < col; j++)
-			scanf("%d", *(p + i) + j ); 
+			scanf_s("%d", *(p + i) + j );
 	}
 
 	return;
 }
 
-// 5¸íÀÇ ÇĞ»ı¿¡ ´ëÇÏ¿© 3°ú¸ñÀÇ ¼ºÀû¿¡ ´ëÇÑ ÃÑÁ¡°ú Æò±ÕÀ» °è»êÇÏ¿© Ãâ·Â ÇÔ¼ö
-void  OUTPUT(int (*p)[COL], int row, int col)
-{
-	int	i, j;
-
-	printf("\n¼ø¹ø  ±¹¾î  ¿µ¾î  ¼öÇĞ \t ÃÑÁ¡ \t Æò±Õ\n");
-	for (i = 0; i < row; i++)	// ÇÑ ÇĞ»ı¾¿ ¼ºÀû Ã³¸®
-	{
+// 5ëª…ì˜ í•™ìƒì— ëŒ€í•˜ì—¬ 3ê³¼ëª©ì˜ ì„±ì ì— ëŒ€í•œ ì´ì ê³¼ í‰ê· ì„ ê³„ì‚°í•˜ì—¬ ì¶œë ¥ í•¨ìˆ˜
+void  OUTPUT(int (*p)[COL], int row, int col) {
+	printf("\nìˆœë²ˆ  êµ­ì–´  ì˜ì–´  ìˆ˜í•™ \t ì´ì  \t í‰ê· \n");
+	for(int i = 0; i < row; i++) {
 		int	tot = 0;
 		double	ave = 0.0;
 
-		// ÇÑ ÇĞ»ıÀÇ ¼ºÀû Ãâ·Â ¹× ÇÕ°è
+		// í•œ í•™ìƒì˜ ì„±ì  ì¶œë ¥ ë° í•©ê³„
 		printf("%2d : ", i + 1);
-		for(j = 0; j < col; j++)
+		for(int j = 0; j < col; j++)
 			printf("%5d", *(*(p + i ) + j) );
 
-		// ÇÑ ÇĞ»ıÀÇ ¼ºÀû : ÃÑÁ¡°ú Æò±Õ °è»ê
-		tot  =  SUM(*(p + i), col);
-		ave  =  AVE(*(p + i), col);	
+		// í•œ í•™ìƒì˜ ì„±ì  : ì´ì ê³¼ í‰ê·  ê³„ì‚°
+		tot = SUM(*(p + i), col);
+		ave = AVE(*(p + i), col);	
 
 		printf("\t%5d\t%5.2f\n", tot, ave);
 	}
-
 	return;
 }
 
-// ÇÑ ÇĞ»ı¿¡ ´ëÇÑ 3°ú¸ñÀÇ ÃÑÁ¡ °è»ê ÇÔ¼ö
-int  SUM(int *p, int col)
-{
-	int	i, tot = 0;
-
-	for(i = 0; i < col; i++)
+// 3ê³¼ëª©ì— ëŒ€í•˜ì—¬ í•œ í•™ìƒì˜ ì´ì  ê³„ì‚°
+int  SUM(int *p, int col) {
+	int	tot = 0;
+	for(int i = 0; i < col; i++)
 		tot += *(p + i);
-
 	return tot;
 }
 
-// ÇÑ ÇĞ»ı¿¡ ´ëÇÑ 3°ú¸ñÀÇ Æò±Õ °è»ê ÇÔ¼ö
-double  AVE(int *p,  int col)
-{
-	int	i, tot = 0;
-
-	for(i = 0; i < col; i++)
+// 3ê³¼ëª©ì— ëŒ€í•˜ì—¬ í•œ í•™ìƒì˜ í‰ê·  ê³„ì‚°
+double  AVE(int *p,  int col) {
+	int	tot = 0;
+	for(int i = 0; i < col; i++)
 		tot += *(p + i);
-
 	return (double)tot / col;
 }
