@@ -1,17 +1,18 @@
+// í¬ì¸í„° ë°°ì—´
 #include <stdio.h>
 int main(void)
 {
 	int		a, b, c;
-	int		*arr[3];
+	int		*arr[3];		// í¬ì¸í„° ë°°ì—´
 
 	arr[0] = &a;
 	arr[1] = &b;
 	arr[2] = &c;
 
-	printf("3°³ÀÇ Á¤¼ö ÀÔ·Â : ");
-	scanf("%d", arr[0]);			// scanf("%d", &a);
-	scanf("%d", arr[1]);			// scanf("%d", &b);
-	scanf("%d", arr[2]);			// scanf("%d", &c);
+	printf("3ê°œì˜ ì •ìˆ˜ ì…ë ¥: ");
+	scanf_s("%d", arr[0]);			// scanf_s("%d", &a);
+	scanf_s("%d", arr[1]);			// scanf_s("%d", &b);
+	scanf_s("%d", arr[2]);			// scanf_s("%d", &c);
 
 	printf("a : %d \n", *arr[0]);
 	printf("b : %d \n", *arr[1]);
