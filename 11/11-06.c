@@ -1,16 +1,22 @@
+// í¬ì¸í„° ë°°ì—´
 #include <stdio.h>
-#define MAX_SIZE 3
+
+#define arrMAXSIZE 3
+
 int main(void)
 {
-	int	i, a, b, c;
-	int	*arr[MAX_SIZE] = {&a, &b, &c};
+	int	a, b, c;
+	int*	arr[arrMAXSIZE] = { &a, &b, &c };	// í¬ì¸í„° ë°°ì—´
 
-	printf("%3d°³ÀÇ Á¤¼ö ÀÔ·Â : ", MAX_SIZE);
-	for(i=0; i<MAX_SIZE; i++)
-		scanf("%d", *(arr+i));
+	// arr[0] = &a;
+	// arr[1] = &b;
+	// arr[2] = &c;
+	printf("%3dê°œì˜ ì •ìˆ˜ ì…ë ¥: ", arrMAXSIZE);
+	for(int i=0; i<arrMAXSIZE; i++)
+		scanf_s("%d", *(arr+i));		// scanf_s("%d", arr[i]));
 
-	printf("\n### °á°ú Ãâ·Â ### \n");
-	for(i=0; i<MAX_SIZE; i++)
+	printf("\n### ê²°ê³¼ ì¶œë ¥ ### \n");
+	for(int i=0; i<arrMAXSIZE; i++)
 		printf("%d \n", **(arr+i));
 
 	return 0;
