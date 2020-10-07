@@ -1,22 +1,22 @@
 #include <stdio.h>
-#include <string.h>
+#include <string.h>	// strcpy / strcpy_s
 int main(void)
 {
-	// ±¸Á¶Ã¼Çü º¯¼ö ¼±¾ğ
-	struct
-	{
+	// êµ¬ì¡°ì²´í˜• ë³€ìˆ˜
+	struct	{
 		char	name[12];
 		int	kor, eng, math, tot;
 		float	ave;
 	}a;
 
-	// ±¸Á¶Ã¼Çü º¯¼öÀÇ °¢ ¸â¹ö¿¡ µ¥ÀÌÅÍ ÀúÀå
-	strcpy(a.name, "È«±æµ¿");
+	// êµ¬ë‘ì  ì—°ì‚°ì(.): êµ¬ì¡°ì²´ ë©¤ë²„ ì ‘ê·¼
+	// êµ¬ì¡°ì²´ ë©¤ë²„ì— ë°ì´í„° ì €ì¥
+	// strcpy(a.name, "í™ê¸¸ë™");
+	strcpy_s(a.name, sizeof(a.name), "í™ê¸¸ë™");
 	a.kor = 70;
 	a.eng = 80;
 	a.math = 90;
 
-	// ÃÑÁ¡°ú Æò±Õ °è»ê
 	a.tot = a.kor + a.eng + a.math;
 	a.ave = (float)(a.kor + a.eng + a.math)/3;
 
