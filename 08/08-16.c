@@ -1,6 +1,7 @@
 // 구조체와 공용체
 #include <stdio.h>
 
+// 구조체 비트 필드
 typedef struct _uint {
 	unsigned int	FirstBit: 8;
 	unsigned int	SecondBit: 8;
@@ -8,6 +9,7 @@ typedef struct _uint {
 	unsigned int	ForthBit: 8;
 }UINT;
 
+// 공용체: 정수형과 구조체 멤버
 typedef union _endian {
 	int	a;
 	UINT	b;
