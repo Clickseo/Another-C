@@ -1,6 +1,7 @@
 // 구조체 선언 및 정의: 형식(재) 정의된 구조체
 #include <stdio.h>
 
+// 형식(재) 정의된 구조체: SCORE
 typedef struct _score {
 	char	name[12];
 	int	kor, eng, math, tot;
