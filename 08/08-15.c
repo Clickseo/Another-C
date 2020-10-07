@@ -1,7 +1,7 @@
+// 복합 데이터 유형: 공용체
 #include <stdio.h>
 
-typedef union _type
-{
+typedef union _type {
 	char	ch;
 	int	i;
 	double	d;
