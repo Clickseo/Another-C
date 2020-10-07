@@ -11,8 +11,8 @@ typedef struct _score {
 
 int main(void)
 {
-	SCORE	a;
-	SCORE	*pS = &a;
+	SCORE	s;
+	SCORE	*pS = &s;
 
 	printf("이름 : ");	gets_s(pS->name, sizeof(pS->name));	// gets(pS->name);
 	printf("국어 : ");	scanf_s("%d", &pS->kor);		// scanf("%d", &pS->kor);
