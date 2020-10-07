@@ -5,7 +5,7 @@
 // 형식(재) 정의된 구조체: SCORE
 typedef struct _score {
 	char	name[12];
-	int		kor, eng, math, tot;
+	int	kor, eng, math, tot;
 	float	ave;
 }SCORE;
 
