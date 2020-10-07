@@ -1,24 +1,32 @@
 #include <stdio.h>
 
-// ±¸Á¶Ã¼ ºñÆ® ÇÊµå¸¦ ÀÌ¿ëÇÑ ±¸Á¶Ã¼ÀÇ Çü½Ä Á¤ÀÇ
-typedef struct _new_date 
-{
-	unsigned int	year : 15;
-	unsigned int	month : 4;
-	unsigned int	day : 5;
-}new_DATE;
+// DATE í˜•ì‹ì˜ í¬ê¸°: 12bytes
+typedef struct _date {
+	unsigned int	year;
+	unsigned int	month;
+	unsigned int	day;
+} DATE;
+
+// êµ¬ì¡°ì²´ ë¹„íŠ¸ í•„ë“œ
+// new_DATE í˜•ì‹ì˜ í¬ê¸°: 4bytes
+typedef struct _new_date {
+	unsigned int	year: 16;	// 16bits
+	unsigned int	month: 4;	//  4bits
+	unsigned int	day: 5;		//  5bits
+} new_DATE;
 
 int main(void)
 {
-	// ±¸Á¶Ã¼Çü º¯¼ö ¼±¾ğ
 	new_DATE	a;
 
-	// ±¸Á¶Ã¼ ºñÆ® ÇÊµå·Î ¼³°èµÈ ¸â¹ö¿¡ µ¥ÀÌÅÍ ÀúÀå
-	a.year = 2011;
+	printf("    DATE í˜•ì‹ì˜ í¬ê¸°: %d \n", sizeof(DATE));
+	printf("new_DATE í˜•ì‹ì˜ í¬ê¸°: %d \n", sizeof(new_DATE));
+
+	a.year = 2020;
 	a.month = 12;
 	a.day = 31;
 
-	printf("³¯Â¥ : %d-%d-%d \n", a.year, a.month, a.day); 
+	printf("ë‚ ì§œ: %d-%d-%d \n", a.year, a.month, a.day);
 
 	return 0;
 }
