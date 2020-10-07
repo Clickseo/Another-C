@@ -21,8 +21,8 @@ int main(void)
 	a.ave = (float)(a.kor + a.eng + a.math) / 3;
 
 	printf("\n %10s 학생의 성적 결과 \n", a.name);
-	printf("국어 : %3d, 영어 : %3d, 수학 :  %3d \n", a.kor, a.eng, a.math);
-	printf("총점 : %3d, 평균 : %8.2lf \n", a.tot, a.ave);
+	printf("국어: %3d, 영어: %3d, 수학:  %3d \n", a.kor, a.eng, a.math);
+	printf("총점: %3d, 평균: %8.2lf \n", a.tot, a.ave);
 
 	return 0;
 }
