@@ -1,3 +1,4 @@
+// 구조체의 이해
 #include <stdio.h>
 int main(void)
 {
