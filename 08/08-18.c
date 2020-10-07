@@ -1,11 +1,14 @@
+// 복합 데이터 유형: 열거형
 #include <stdio.h>
 int main(void)
 {
-	enum TV {AFN = 2, SBS = 6, KBS2 = 7,
-	         KBS1 = 9, MBC  = 11, EBS = 13,
-	         YTN = 60, MBN = 61, CNN  = 51};
+	enum TV {
+		AFN = 2, SBS = 6, KBS2 = 7,
+		KBS1 = 9, MBC = 11, EBS = 13,
+		YTN = 60, MBN = 61, CNN = 51
+	};
 
-	printf("��ܺ��� TV ä�� ���... \n\n");
+	printf("즐겨보는 TV 채널 목록\n\n");
 	printf("  AFN : %d\n", AFN);
 	printf("  SBS : %d\n", SBS);
 	printf("  KBS2: %d\n", KBS2);
