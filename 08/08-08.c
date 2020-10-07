@@ -1,46 +1,44 @@
+// êµ¬ì¡°ì²´ì˜ ì´í•´: ì¤‘ì²© êµ¬ì¡°ì²´
 #include <stdio.h>
 
-typedef struct _date
-{
+// í˜•ì‹(ì¬) ì •ì˜ëœ êµ¬ì¡°ì²´: DATE
+typedef struct _date {
 	int		year;
 	int		month;
 	int		day;
 }DATE;
 
-typedef struct _info
-{
+// í˜•ì‹(ì¬) ì •ì˜ëœ êµ¬ì¡°ì²´: INFO
+typedef struct _info {
 	char	name[12];
-	DATE	birth_date;		// »ı³â¿ùÀÏ
-	DATE	join_date;		// ÀÔ»çÀÏ
-	DATE	resign_date;		// Åğ»çÀÏ
+	DATE	birth_date;	// ìƒë…„ì›”ì¼
+	DATE	join_date;	// ì…ì‚¬ì¼
+	DATE	resign_date;	// í‡´ì‚¬ì¼
 }INFO;
 
 int main(void)
 {
 	INFO	temp;
 
-	printf("ÀÌ    ¸§ : ");
-	gets(temp.name);
+	printf("ì´    ë¦„: ");
+	gets_s(temp.name, sizeof(temp.name));		// gets(temp.name);
 
-	printf("»ı³â¿ùÀÏ : ");
-	scanf("%d %d %d", &temp.birth_date.year,
-		&temp.birth_date.month, &temp.birth_date.day);
+	printf("ìƒë…„ì›”ì¼: ");
+	// scanf("%d %d %d", &temp.birth_date.year, &temp.birth_date.month, &temp.birth_date.day);
+	scanf_s("%d %d %d", &temp.birth_date.year, &temp.birth_date.month, &temp.birth_date.day);
 
-	printf("ÀÔ»ç³¯Â¥ : ");
-	scanf("%d %d %d", &temp.join_date.year,
-		&temp.join_date.month, &temp.join_date.day);
+	printf("ì…ì‚¬ë‚ ì§œ: ");
+	// scanf("%d %d %d", &temp.join_date.year,	&temp.join_date.month, &temp.join_date.day);
+	scanf_s("%d %d %d", &temp.join_date.year, &temp.join_date.month, &temp.join_date.day);
 
-	printf("Åğ»ç³¯Â¥ : ");
-	scanf("%d %d %d", &temp.resign_date.year,
-		&temp.resign_date.month, &temp.resign_date.day);
+	printf("í‡´ì‚¬ë‚ ì§œ: ");
+	// scanf("%d %d %d", &temp.resign_date.year, &temp.resign_date.month, &temp.resign_date.day);
+	scanf_s("%d %d %d", &temp.resign_date.year, &temp.resign_date.month, &temp.resign_date.day);
 
-	printf("\n %10s´ÔÀÇ Á¤º¸ Ãâ·Â\n", temp.name);
-	printf("»ı³â¿ùÀÏ : %d %d %d\n", temp.birth_date.year,
-		 temp.birth_date.month, temp.birth_date.day);
-	printf("ÀÔ»ç³¯Â¥ : %d %d %d\n", temp.join_date.year,
-		temp.join_date.month, temp.join_date.day);
-	printf("Åğ»ç³¯Â¥ : %d %d %d\n", temp.resign_date.year,
-		 temp.resign_date.month, temp.resign_date.day);
+	printf("\n %10së‹˜ì˜ ì •ë³´ ì¶œë ¥\n", temp.name);
+	printf("ìƒë…„ì›”ì¼: %d %d %d\n", temp.birth_date.year, temp.birth_date.month, temp.birth_date.day);
+	printf("ì…ì‚¬ë‚ ì§œ: %d %d %d\n", temp.join_date.year,	temp.join_date.month, temp.join_date.day);
+	printf("í‡´ì‚¬ë‚ ì§œ: %d %d %d\n", temp.resign_date.year, temp.resign_date.month, temp.resign_date.day);
 
 	return 0;
 }
