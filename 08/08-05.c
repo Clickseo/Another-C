@@ -1,3 +1,4 @@
+// 구조체 선언 및 정의: 구조체 비트 필드
 #include <stdio.h>
 
 // DATE 형식의 크기: 12bytes
