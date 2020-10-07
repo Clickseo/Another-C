@@ -10,8 +10,7 @@ typedef struct _score {
 }SCORE;
 
 // 
-void OUTPUT(const char* pName,
-	int pKor, int pEng, int pMath, int pTot, float pAve);
+void OUTPUT(const char* pName,	int pKor, int pEng, int pMath, int pTot, float pAve);
 
 int main(void)
 {
@@ -25,13 +24,14 @@ int main(void)
 	a.tot = a.kor + a.eng + a.math;
 	a.ave = (float)(a.kor + a.eng + a.math) / 3;
 
+	// 함수 호출: 구조체 멤버를 개별적으로 함수에 복사본 전달
+	// 값에 의한 호출(pass by Value)
 	OUTPUT(a.name, a.kor, a.eng, a.math, a.tot, a.ave);
 
 	return 0;
 }
 
-void OUTPUT(const char	*pName,
-	int pKor, int pEng, int pMath,	int pTot, float pAve)
+void OUTPUT(const char	*pName,	int pKor, int pEng, int pMath,	int pTot, float pAve)
 {
 	printf("\n %10s 학생의 성적 결과 \n", pName);
 	printf("국어: %3d, 영어: %3d, 수학:  %3d\n", pKor, pEng, pMath);
