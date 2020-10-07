@@ -11,19 +11,19 @@ typedef struct _score {
 int main(void)
 {
 	// 구조체형 변수 선언
-	SCORE	a;
+	SCORE	s;
 
-	printf("이름 : ");	gets_s(a.name, sizeof(a.name));		// gets(a.name);
-	printf("국어 : ");	scanf_s("%d", &a.kor);			// scanf("%d", &a.kor);
-	printf("영어 : ");	scanf_s("%d", &a.eng);			// scanf("%d", &a.eng);
-	printf("수학 : ");	scanf_s("%d", &a.math);			// scanf("%d", &a.math);
+	printf("이름 : ");	gets_s(s.name, sizeof(s.name));		// gets(s.name);
+	printf("국어 : ");	scanf_s("%d", &s.kor);			// scanf("%d", &s.kor);
+	printf("영어 : ");	scanf_s("%d", &s.eng);			// scanf("%d", &s.eng);
+	printf("수학 : ");	scanf_s("%d", &s.math);			// scanf("%d", &s.math);
 
-	a.tot = a.kor + a.eng + a.math;
-	a.ave = (float)(a.kor + a.eng + a.math) / 3;
+	s.tot = s.kor + s.eng + s.math;
+	s.ave = (float)(s.kor + s.eng + s.math) / 3;
 
-	printf("\n %10s 학생의 성적 결과 \n", a.name);
-	printf("국어: %3d, 영어: %3d, 수학:  %3d \n", a.kor, a.eng, a.math);
-	printf("총점: %3d, 평균: %8.2lf \n", a.tot, a.ave);
+	printf("\n %10s 학생의 성적 결과 \n", s.name);
+	printf("국어: %3d, 영어: %3d, 수학:  %3d \n", s.kor, s.eng, s.math);
+	printf("총점: %3d, 평균: %8.2lf \n", s.tot, s.ave);
 
 	return 0;
 }
