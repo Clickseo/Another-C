@@ -1,9 +1,11 @@
+// êµ¬ì¡°ì²´ì™€ í¬ì¸í„° ê·¸ë¦¬ê³  í•¨ìˆ˜
+// 3) êµ¬ì¡°ì²´ì˜ ì£¼ì†Œë¥¼ í•¨ìˆ˜ì— ì „ë‹¬(pass by Address)
 #include <stdio.h>
 
-typedef struct _score
-{
+// í˜•ì‹(ì¬) ì •ì˜ëœ êµ¬ì¡°ì²´: SCORE
+typedef struct _score {
 	char	name[12];
-	int	kor, eng, math, tot;
+	int		kor, eng, math, tot;
 	float	ave;
 }SCORE;
 
@@ -11,28 +13,28 @@ void OUTPUT(SCORE *);
 
 int main(void)
 {
-	SCORE	a;
+	SCORE	s;
 
-	printf("ÀÌ¸§ : ");	gets(a.name);
-	printf("±¹¾î : ");	scanf("%d", &a.kor);
-	printf("¿µ¾î : ");	scanf("%d", &a.eng);
-	printf("¼öÇĞ : ");	scanf("%d", &a.math);
+	printf("ì´ë¦„ : ");	gets_s(s.name, sizeof(s.name));		// gets(s.name);
+	printf("êµ­ì–´ : ");	scanf_s("%d", &s.kor);			// scanf("%d", &s.kor);
+	printf("ì˜ì–´ : ");	scanf_s("%d", &s.eng);			// scanf("%d", &s.eng);
+	printf("ìˆ˜í•™ : ");	scanf_s("%d", &s.math);			// scanf("%d", &s.math);
 
-	a.tot = a.kor + a.eng + a.math;
-	a.ave = (float)(a.kor + a.eng + a.math)/3;
+	s.tot = s.kor + s.eng + s.math;
+	s.ave = (float)(s.kor + s.eng + s.math) / 3;
 
-	OUTPUT(&a);
+	// í•¨ìˆ˜ í˜¸ì¶œ: êµ¬ì¡°ì²´ì˜ ì£¼ì†Œë¥¼ í•¨ìˆ˜ì— ì „ë‹¬(pass by Address)
+	OUTPUT(&s);
 
 	return 0;
 }
 
-void OUTPUT(SCORE *p)
+// í•¨ìˆ˜ ì •ì˜: pS = &s
+void OUTPUT(SCORE	*pS)
 {
-	printf("\n %10s ÇĞ»ıÀÇ ¼ºÀû °á°ú \n", p->name);
-	printf("±¹¾î : %3d, ¿µ¾î : %3d, ¼öÇĞ :  %3d \n", 
-					p->kor, p->eng, p->math);
-
-	printf("ÃÑÁ¡ : %3d, Æò±Õ : %8.2lf \n", p->tot, p->ave);
+	printf("\n %10s í•™ìƒì˜ ì„±ì  ê²°ê³¼ \n", pS->name);
+	printf("êµ­ì–´: %3d, ì˜ì–´: %3d, ìˆ˜í•™:  %3d \n", pS->kor, pS->eng, pS->math);
+	printf("ì´ì  : %3d, í‰ê· : %8.2lf \n", pS->tot, pS->ave);
 
 	return;
 }
