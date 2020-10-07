@@ -10,7 +10,7 @@ typedef struct _new_date {
 int main(void)
 {
 	// 년월일 입력을 위한 임시 변수
-	int			year, month, day;
+	int		year, month, day;
 	new_DATE	a;
 
 	// 구조체 비트 필드에는 주소 연산자(&) 사용 불가
