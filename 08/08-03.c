@@ -1,3 +1,4 @@
+// 구조체 선언 및 정의: 구조체 멤버 접근
 #include <stdio.h>
 #include <string.h>	// strcpy / strcpy_s
 int main(void)
