@@ -1,19 +1,21 @@
+// ë³µí•© ë°ì´í„° ìœ í˜•: ì—´ê±°í˜•
 #include <stdio.h>
+// #include <stdbool.h>		// true, false
 
-// ¸ÅÅ©·Î »ó¼ö
+// ë§¤í¬ë¡œ ìƒìˆ˜: ì°¸(TRUE)ê³¼ ê±°ì§“(FALSE)
 // #define TRUE 1
 // #define FALSE 0
 
-enum BOOL {FALSE, TRUE};
+enum BOOL { FALSE, TRUE };
 
 int main(void)
 {
 	int	state = TRUE;		// int  state = 1;
 
-	if(state == TRUE)			// if(state == 1)
-		printf("Âü!!! \n");
-	if(state == FALSE)			// if(state == 0)
-		printf("°ÅÁş!!! \n");
+	if (state == TRUE)		// if(state == 1)
+		printf("ì°¸!!! \n");
+	else if (state == FALSE)	// if(state == 0)
+		printf("ê±°ì§“!!! \n");
 
 	return 0;
 }
