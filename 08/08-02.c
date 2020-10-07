@@ -6,7 +6,7 @@ int main(void)
 		char	name[12];
 		int	kor, eng, math, tot;
 		float	ave;
-	}a;
+	}s;
 
 	return 0;
 }
