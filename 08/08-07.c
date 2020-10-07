@@ -1,9 +1,10 @@
+// êµ¬ì¡°ì²´ì˜ ì´í•´: êµ¬ì¡°ì²´ ë°°ì—´
 #include <stdio.h>
-#define MAX_SIZE 3		// ÇĞ»ı ¼ö
 
-// ±¸Á¶Ã¼Çü SCORE Çü½Ä Á¤ÀÇ
-typedef struct _score
-{
+#define stuMAXSIZE 3		// í•™ìƒ ìˆ˜
+
+// í˜•ì‹(ì¬) ì •ì˜ëœ êµ¬ì¡°ì²´: SCORE
+typedef struct _score {
 	char	name[12];
 	int	kor, eng, math, tot;
 	float	ave;
@@ -11,29 +12,25 @@ typedef struct _score
 
 int main(void)
 {
-	int	i;
-	SCORE	arr[MAX_SIZE];
+	// êµ¬ì¡°ì²´ ë°°ì—´
+	SCORE	arr[stuMAXSIZE];
 
-	// 3¸í¿¡ ´ëÇÑ ÇĞ»ı ¼ºÀû ÀÔ·Â ¹× ÃÑÁ¡°ú Æò±Õ °è»ê
-	for(i=0; i<MAX_SIZE; i++)
-	{
-		printf("%3d¹øÂ° ÇĞ»ı ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À...\n", i+1);
-		printf("ÀÌ¸§ : ");	gets(arr[i].name);
-		printf("±¹¾î : ");	scanf("%d", &arr[i].kor);
-		printf("¿µ¾î : ");	scanf("%d", &arr[i].eng);
-		printf("¼öÇĞ : ");	scanf("%d", &arr[i].math);
-					fflush(stdin);
+	for (int i = 0; i < stuMAXSIZE; i++)	{
+		printf("%3dë²ˆì§¸ í•™ìƒ ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤...\n", i + 1);
+		printf("ì´ë¦„: ");	gets_s(arr[i].name, sizeof(arr[i].name));	// gets(arr[i].name);
+		printf("êµ­ì–´: ");	scanf_s("%d", &arr[i].kor);			// scanf("%d", &arr[i].kor);
+		printf("ì˜ì–´: ");	scanf_s("%d", &arr[i].eng);			// scanf("%d", &arr[i].eng);
+		printf("ìˆ˜í•™: ");	scanf_s("%d%*c", &arr[i].math);			// scanf("%d", &arr[i].math);
 
 		arr[i].tot = arr[i].kor + arr[i].eng + arr[i].math;
 		arr[i].ave = (float)arr[i].tot / 3;
 	}
 
-	// 3¸í¿¡ ´ëÇÑ ¼ºÀû °á°ú Ãâ·Â
-	printf("\n \t ### ¼ºÀû °á°ú ### \n");
-	for(i=0; i<MAX_SIZE; i++)
+	printf("\n \t ### ì„±ì  ê²°ê³¼ ### \n");
+	for (int i = 0; i < stuMAXSIZE; i++)
 		printf("%3d : %10s %3d %3d %3d %5d %8.2lf \n",
-		i+1, arr[i].name, arr[i].kor, arr[i].eng,
- 			arr[i].math,	arr[i].tot, arr[i].ave);
+			i + 1, arr[i].name, arr[i].kor, arr[i].eng,
+			arr[i].math, arr[i].tot, arr[i].ave);
 
 	return 0;
 }
