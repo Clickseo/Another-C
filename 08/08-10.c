@@ -1,7 +1,9 @@
+// êµ¬ì¡°ì²´ì™€ í¬ì¸í„°
+// 2) êµ¬ì¡°ì²´í˜• ë³€ìˆ˜ì˜ ê°„ì ‘ ì ‘ê·¼ ë°©ë²•: ê°„ì ‘ ì ‘ê·¼ ì—°ì‚°ì(->)
 #include <stdio.h>
 
-typedef struct _score
-{
+// í˜•ì‹(ì¬) ì •ì˜ëœ êµ¬ì¡°ì²´: SCORE
+typedef struct _score {
 	char	name[12];
 	int	kor, eng, math, tot;
 	float	ave;
@@ -10,21 +12,19 @@ typedef struct _score
 int main(void)
 {
 	SCORE	a;
-	SCORE	*p = &a;
+	SCORE	*pS = &a;
 
-	printf("ÀÌ¸§ : ");	gets(p->name);
-	printf("±¹¾î : ");	scanf("%d", &p->kor);
-	printf("¿µ¾î : ");	scanf("%d", &p->eng);
-	printf("¼öÇĞ : ");	scanf("%d", &p->math);
+	printf("ì´ë¦„ : ");	gets_s(pS->name, sizeof(pS->name));	// gets(pS->name);
+	printf("êµ­ì–´ : ");	scanf_s("%d", &pS->kor);		// scanf("%d", &pS->kor);
+	printf("ì˜ì–´ : ");	scanf_s("%d", &pS->eng);		// scanf("%d", &pS->eng);
+	printf("ìˆ˜í•™ : ");	scanf_s("%d", &pS->math);		// scanf("%d", &pS->math);
 
-	p->tot = p->kor + p->eng + p->math;
-	p->ave = (float)(p->kor + p->eng + p->math)/3;
+	pS->tot = pS->kor + pS->eng + pS->math;
+	pS->ave = (float)(pS->kor + pS->eng + pS->math) / 3;
 
-	printf("\n %10s ÇĞ»ıÀÇ ¼ºÀû °á°ú \n", p->name);
-	printf("±¹¾î : %3d, ¿µ¾î : %3d, ¼öÇĞ :  %3d \n", 
-					p->kor, p->eng, p->math);
-
-	printf("ÃÑÁ¡ : %3d, Æò±Õ : %8.2lf \n", p->tot, p->ave);
+	printf("\n %10s í•™ìƒì˜ ì„±ì  ê²°ê³¼ \n", pS->name);
+	printf("êµ­ì–´: %3d, ì˜ì–´: %3d, ìˆ˜í•™:  %3d \n", pS->kor, pS->eng, pS->math);
+	printf("ì´ì : %3d, í‰ê· : %8.2lf \n", pS->tot, pS->ave);
 
 	return 0;
 }
