@@ -1,6 +1,6 @@
 // 복합 데이터 유형: 열거형
 #include <stdio.h>
-// #include <stdbool.h>		// true, false
+// #include <stdbool.h>		// bool, true, false
 
 // 매크로 상수: 참(TRUE)과 거짓(FALSE)
 // #define TRUE 1
