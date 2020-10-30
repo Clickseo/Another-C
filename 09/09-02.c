@@ -1,41 +1,41 @@
 #include <stdio.h>
 
-#define	BASIC_RATE	390		// ±âº»¿ä±Ý
-#define	KW_RATE	57.3		// KW´ç »ç¿ë¿ä±Ý
-#define	MIN_CHARGE	1000		// ¿ù ÃÖÀú¿ä±Ý: 1,000
-#define	VAT		0.1		// ºÎ°¡°¡Ä¡¼¼: 10%
-#define	BASE_FUND	0.037		// Àü·Â»ê¾÷±â¹Ý±â±Ý: 3.7%
-#define	TITLE		"´ç¿ù Àü±â¿ä±Ý Ã»±¸¼­"
+#define	BASIC_RATE	390	// ê¸°ë³¸ìš”ê¸ˆ
+#define	KW_RATE		57.3	// KWë‹¹ ì‚¬ìš©ìš”ê¸ˆ
+#define	MIN_CHARGE	1000	// ì›” ìµœì €ìš”ê¸ˆ: 1,000
+#define	VAT		0.1	// ë¶€ê°€ê°€ì¹˜ì„¸: 10%
+#define	BASE_FUND	0.037	// ì „ë ¥ì‚°ì—…ê¸°ë°˜ê¸°ê¸ˆ: 3.7%
+#define	TITLE		"ë‹¹ì›” ì „ê¸°ìš”ê¸ˆ ì²­êµ¬ì„œ"
 
 int main(void)
 {
-	int		fee, vat_tax, fund_tax, tot;
+	int		fee, vatTax, fundTax, tot;
 	double		kwh;
 
-	printf("Àü±â »ç¿ë·®(kw): ");
-	scanf("%lf", &kwh);
+	printf("ì „ê¸° ì‚¬ìš©ëŸ‰(kw): ");
+	scanf_s("%lf", &kwh);			// scanf("%lf", &kwh);
 
-	// »ç¿ë¿ä±Ý = ±âº»·á + KW´ç »ç¿ë¿ä±Ý
-	fee = (int)(BASIC_RATE + (kwh  *  KW_RATE));
+	// ì‚¬ìš©ìš”ê¸ˆ = ê¸°ë³¸ë£Œ + KWë‹¹ ì‚¬ìš©ìš”ê¸ˆ
+	fee = (int)(BASIC_RATE + (kwh * KW_RATE));
 
-	// ¿ù ÃÖÀú¿ä±Ý Àû¿ë: 1,000¿ø
-	if(fee < 1000)
+	// ì›” ìµœì €ìš”ê¸ˆ ì ìš©: 1,000ì›
+	if (fee < 1000)
 		fee = 1000;
 
-	// °¢Á¾ ¼¼±Ý: ºÎ°¡°¡Ä¡¼¼(10%), Àü·Â»ê¾÷±â¹Ý±â±Ý(3.7%)
-	vat_tax = (int)(fee * VAT);
-	fund_tax = (int)(fee * BASE_FUND);
+	// ê°ì¢… ì„¸ê¸ˆ: ë¶€ê°€ê°€ì¹˜ì„¸(10%), ì „ë ¥ì‚°ì—…ê¸°ë°˜ê¸°ê¸ˆ(3.7%)
+	vatTax = (int)(fee * VAT);
+	fundTax = (int)(fee * BASE_FUND);
 
-	// Àü±â·á: »ç¿ë¿ä±Ý + ºÎ°¡°¡Ä¡¼¼ + Àü·Â»ê¾÷±â¹Ý±â±Ý
-	tot  =  fee + vat_tax + fund_tax;
+	// ì „ê¸°ë£Œ: ì‚¬ìš©ìš”ê¸ˆ + ë¶€ê°€ê°€ì¹˜ì„¸ + ì „ë ¥ì‚°ì—…ê¸°ë°˜ê¸°ê¸ˆ
+	tot = fee + vatTax + fundTax;
 
 	printf("\n ### %s ###\n\n", TITLE);
-	printf("        ±âº»¿ä±Ý: %8d \n", BASIC_RATE);
-	printf("   KW´ç »ç¿ë¿ä±Ý: %8.1f \n", KW_RATE);
-	printf("      ºÎ°¡°¡Ä¡¼¼: %8.1f%%\n", VAT * 100);
-	printf("Àü·Â»ê¾÷±â¹Ý±â±Ý: %8.1f%%\n", BASE_FUND * 100);
+	printf("        ê¸°ë³¸ìš”ê¸ˆ: %8d \n", BASIC_RATE);
+	printf("   KWë‹¹ ì‚¬ìš©ìš”ê¸ˆ: %8.1f \n", KW_RATE);
+	printf("      ë¶€ê°€ê°€ì¹˜ì„¸: %8.1f%%\n", VAT * 100);
+	printf("ì „ë ¥ì‚°ì—…ê¸°ë°˜ê¸°ê¸ˆ: %8.1f%%\n", BASE_FUND * 100);
 
-	printf("\n ´ç¿ù Ã»±¸¿ä±Ý: %d¿ø \n", tot);
+	printf("\n ë‹¹ì›” ì²­êµ¬ìš”ê¸ˆ: %dì› \n", tot);
 
 	return 0;
 }
