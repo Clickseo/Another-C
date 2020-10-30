@@ -11,7 +11,7 @@ typedef  struct  _score {
 	float	ave;
 } SCORE;
 
-void  INPUT(SCORE *pArr)
+void  INPUT(SCORE *pArr, int num)
 {
 	for (int i = 0; i < stuMAXSIZE; i++, pArr++)	{
 		printf("\n %d 번째 학생 성적 입력... \n", i + 1);
