@@ -1,18 +1,15 @@
-void  INPUT(SCORE  *p)	// error
+void  INPUT(SCORE *pArr)	// error
 {
-	int	i;
+	for (int i = 0; i < stuMAXSIZE; i++, p++)	{
+		printf("\n %d ë²ˆì§¸ í•™ìƒ ì„±ì  ìž…ë ¥... \n", i + 1);
+		printf("í•™ìƒ ì´ë¦„ : ");	gets_s(pArr->name, sizeof(pArr->name));
+		printf("êµ­ì–´ ì ìˆ˜ : ");	scanf_s("%d", &pArr->kor);
+		printf("ì˜ì–´ ì ìˆ˜ : ");	scanf_s("%d", &pArr->eng);
+		printf("ìˆ˜í•™ ì ìˆ˜ : ");	scanf_s("%d%*c", &pArr->math);
+		// fflush(stdin);
 
-	for(i=0; i<MAX_SIZE; i++, p++)
-	{
-		printf("\n %d ¹øÂ° ÇÐ»ý ¼ºÀû ÀÔ·Â... \n", i+1);
-		printf("ÇÐ»ý ÀÌ¸§ : ");	gets(p->name);
-		printf("±¹¾î Á¡¼ö : ");	scanf("%d", &p->kor);
-		printf("¿µ¾î Á¡¼ö : ");	scanf("%d", &p->eng);
-		printf("¼öÇÐ Á¡¼ö : ");	scanf("%d%", &p->math);
-		fflush(stdin);
-
-		p->tot = p->kor + p->eng + p->math;
-		p->ave = (float)p->tot / 3;
+		pArr->tot = pArr->kor + pArr->eng + pArr->math;
+		pArr->ave = (float)pArr->tot / 3;
 	}
 
 	return;
