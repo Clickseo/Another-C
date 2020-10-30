@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-// 함수 원형: 정수형과 실수형에 대한 나눗셈 함수
-int		DIV_int(int, int);
-double	DIV_double(double, double);
+// 함수 원형: 일반 함수
+int		DIV_int(int, int);		// 정수형 처리를 위한 나눗셈 함수
+double	DIV_double(double, double);		// 실수형 처리를 위한 나눗셈 함수
 
 int main(void)
 {
