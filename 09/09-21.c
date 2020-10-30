@@ -1,7 +1,7 @@
 // 헤더 파일: score.h
 
 // 매크로 상수: 학생 수
-#define MAX_SIZE 3
+#define stuMAXSIZE 3
 
 // 형식(재) 정의된 구조체: SCORE
 typedef  struct  _score {
