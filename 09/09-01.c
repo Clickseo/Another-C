@@ -1,16 +1,18 @@
 #include <stdio.h>
-// ¸ÅÅ©·Î »ó¼ö
+
+// ë§¤í¬ë¡œ ìƒìˆ˜
 #define	 PI  3.14159
+
 int main(void)
 {
 	double		area, radius;
 
-	printf("¿øÀÇ ¹İÁö¸§ ÀÔ·Â : ");
-	scanf("%lf", &radius);
+	printf("ì›ì˜ ë°˜ì§€ë¦„ ì…ë ¥ : ");
+	scanf_s("%lf", &radius);		// scanf("%lf", &radius);
 
 	area = radius * radius * PI;
 
-	printf("\n¿øÀÇ ¸éÀû %.2f\n", area);
+	printf("\nì›ì˜ ë©´ì  %.2f\n", area);
 
 	return 0;
 }
