@@ -1,5 +1,8 @@
 #include <stdio.h>
+
+// 매크로 함수
 #define	DIV(a, b)	(a / b)
+
 int main(void)
 {
 	int	res;
