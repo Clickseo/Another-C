@@ -1,27 +1,26 @@
+// input.c <-- SCORE í˜•ì‹ ì •ì˜ ì¶”ê°€
 #include <stdio.h>
-#define MAX_SIZE 3
-typedef  struct  _score
-{
+
+// ë§¤í¬ë¡œ ìƒìˆ˜: í•™ìƒ ìˆ˜
+#define stuMAXSIZE 3
+typedef  struct  _score {
 	char	name[12];
 	int	kor, eng, math, tot;
 	float	ave;
 } SCORE;
 
-void  INPUT(SCORE  *p)
+void  INPUT(SCORE *pArr)
 {
-	int	i;
+	for (int i = 0; i < stuMAXSIZE; i++, pArr++)	{
+		printf("\n %d ë²ˆì§¸ í•™ìƒ ì„±ì  ì…ë ¥... \n", i + 1);
+		printf("í•™ìƒ ì´ë¦„ : ");	gets_s(pArr->name, sizeof(pArr->name));
+		printf("êµ­ì–´ ì ìˆ˜ : ");	scanf_s("%d", &pArr->kor);
+		printf("ì˜ì–´ ì ìˆ˜ : ");	scanf_s("%d", &pArr->eng);
+		printf("ìˆ˜í•™ ì ìˆ˜ : ");	scanf_s("%d%*c", &pArr->math);
+		// fflush(stdin);
 
-	for(i=0; i<MAX_SIZE; i++, p++)	
-	{
-		printf("\n %d ¹øÂ° ÇĞ»ı ¼ºÀû ÀÔ·Â... \n", i+1);
-		printf("ÇĞ»ı ÀÌ¸§ : ");	gets(p->name);
-		printf("±¹¾î Á¡¼ö : ");	scanf("%d", &p->kor);
-		printf("¿µ¾î Á¡¼ö : ");	scanf("%d", &p->eng);
-		printf("¼öÇĞ Á¡¼ö : ");	scanf("%d", &p->math);
-		fflush(stdin);
-
-		p->tot = p->kor + p->eng + p->math;
-		p->ave = (float)p->tot / 3;
+		pArr->tot = pArr->kor + pArr->eng + pArr->math;
+		pArr->ave = (float)pArr->tot / 3;
 	}
 
 	return;
