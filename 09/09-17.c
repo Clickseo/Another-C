@@ -1,3 +1,4 @@
+// main.c
 #include <stdio.h>
 
 // 매크로 상수: 학생 수
