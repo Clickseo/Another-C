@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // 매크로 상수: 학생 수
-#define arrMAXSIZE 3
+#define stuMAXSIZE 3
 
 // 형식(재) 정의된 구조체: SCORE
 typedef  struct  _score {
@@ -14,7 +14,7 @@ typedef  struct  _score {
 void  OUTPUT(SCORE *pArr)
 {
 	printf("\n \t ### 학생 성적 정보 ### \n");
-	for (int i = 0; i < arrMAXSIZE; i++, pArr++)
+	for (int i = 0; i < stuMAXSIZE; i++, pArr++)
 		printf("%10s %3d %3d %3d %5d %8.2f \n",
 			pArr->name, pArr->kor, pArr->eng, pArr->math, pArr->tot, pArr->ave);
 
