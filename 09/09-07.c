@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 함수 원형: 일반 함수
+// 함수 원형: 나눗셈 함수 -- 정수형 데이터 처리
 int	DIV(int, int);
 
 int main(void)
