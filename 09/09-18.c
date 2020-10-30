@@ -1,5 +1,5 @@
 // input.c
-void  INPUT(SCORE *pArr)	// error: "SCORE"이(가) 정의되어 있지 않습니다.
+void  INPUT(SCORE *pArr, int num)	// error: "SCORE"이(가) 정의되어 있지 않습니다.
 {
 	for (int i = 0; i < stuMAXSIZE; i++, pArr++)	{	// error: "stuMAXSIZE"이(가) 정의되어 있지 않습니다.
 		printf("\n %d 번째 학생 성적 입력... \n", i + 1);
