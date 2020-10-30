@@ -1,21 +1,23 @@
 #include <stdio.h>
-#define MAX_SIZE 3
-typedef  struct  _score
-{
+
+// 매크로 상수: 학생 수
+#define stuMAXSIZE 3
+
+typedef  struct  _score {
 	char	name[12];
 	int	kor, eng, math, tot;
 	float	ave;
 } SCORE;
 
-void	INPUT(SCORE  *);
-void	OUTPUT(SCORE  *);
+void	INPUT(SCORE *pArr, int num);
+void	OUTPUT(SCORE*pArr, int num);
 
 int main(void)
 {
-	SCORE	arr[MAX_SIZE];
+	SCORE	arr[stuMAXSIZE];
 
-	INPUT(arr);
-	OUTPUT(arr);
+	INPUT(arr, stuMAXSIZE); 
+	OUTPUT(arr, stuMAXSIZE);
 
 	return 0;
 }
