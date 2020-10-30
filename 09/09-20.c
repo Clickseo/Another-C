@@ -1,12 +1,13 @@
-// output.c
+// output.c <-- SCORE 형식 정의 매크로 상수 추가
 #include <stdio.h>
 
 // 매크로 상수: 학생 수
 #define arrMAXSIZE 3
 
+// 형식(재) 정의된 구조체: SCORE
 typedef  struct  _score {
 	char	name[12];
-	int		kor, eng, math, tot;
+	int	kor, eng, math, tot;
 	float	ave;
 } SCORE;
 
