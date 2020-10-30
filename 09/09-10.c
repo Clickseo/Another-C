@@ -1,35 +1,35 @@
 #include <stdio.h>
 
-#define  ADD(a, b)	((a)  +  (b))
-#define  SUB(a, b)	((a)  -  (b))
-#define  MUL(a, b)	((a)  *  (b))
-#define  DIV(a, b)	((a)  /  (b))
+#define  ADD(a, b)	((a) + (b))
+#define  SUB(a, b)	((a) - (b))
+#define  MUL(a, b)	((a) * (b))
+#define  DIV(a, b)	((a) / (b))
 
-#define  MAX(a, b)	 (((a) > (b))  ?  (a)  :  (b))
-#define  MIN(a, b)	(((a) < (b))  ?  (a)  :  (b))
+#define  MAX(a, b)	(((a) > (b)) ? (a) : (b))
+#define  MIN(a, b)	(((a) < (b)) ? (a) : (b))
 
-#define  ABS(a)		(((a) > 0)  ?  (a)  :  -(a))
+#define  ABS(a)		(((a) > 0) ? (a) : -(a))
 
 int main(void)
 {
-	int		a, b;
+	int	a, b;
 
-	printf("µÎ Á¤¼ö ÀÔ·Â: ");
-	scanf("%d %d", &a, &b);
+	printf("ë‘ ì •ìˆ˜ ì…ë ¥: ");
+	scanf_s("%d %d", &a, &b);		// scanf("%d %d", &a, &b);
 
-	// ¸ÅÅ©·Î ÇÔ¼ö¸¦ ÀÌ¿ëÇÑ »çÄ¢¿¬»ê
-	printf("µ¡  ¼À ¿¬»ê: %d \n", ADD(a, b) );
-	printf("³ª´°¼À ¿¬»ê: %d \n", SUB(a, b) );
-	printf("°ö  ¼À ¿¬»ê: %d \n", MUL(a, b) );
-	printf("³ª´°¼À ¿¬»ê: %d \n\n", DIV(a, b) );
+	// ë§¤í¬ë¡œ í•¨ìˆ˜ë¥¼ ì´ìš©í•œ ì‚¬ì¹™ì—°ì‚°
+	printf("ë§  ì…ˆ ì—°ì‚°: %d \n", ADD(a, b));
+	printf("ë‚˜ëˆ—ì…ˆ ì—°ì‚°: %d \n", SUB(a, b));
+	printf("ê³±  ì…ˆ ì—°ì‚°: %d \n", MUL(a, b));
+	printf("ë‚˜ëˆ—ì…ˆ ì—°ì‚°: %d \n\n", DIV(a, b));
 
-	// ¸ÅÅ©·Î ÇÔ¼ö¸¦ ÀÌ¿ëÇÑ ÃÖ´ë°ª°ú ÃÖ¼Ò°ª
-	printf("ÃÖ´ñ°ª: %d \n", MAX(a, b) );
-	printf("ÃÖ¼Ú°ª: %d \n\n", MIN(a, b) );
+	// ë§¤í¬ë¡œ í•¨ìˆ˜ë¥¼ ì´ìš©í•œ ìµœëŒ€ê°’ê³¼ ìµœì†Œê°’
+	printf("ìµœëŒ“ê°’: %d \n", MAX(a, b));
+	printf("ìµœì†Ÿê°’: %d \n\n", MIN(a, b));
 
-	// ¸ÅÅ©·Î ÇÔ¼ö¸¦ ÀÌ¿ëÇÑ Àı´ë°ª
-	printf("º¯¼ö aÀÇ Àı´ñ°ª: %d \n", ABS(a) );
-	printf("º¯¼ö bÀÇ Àı´ñ°ª: %d \n\n", ABS(b) );
+	// ë§¤í¬ë¡œ í•¨ìˆ˜ë¥¼ ì´ìš©í•œ ì ˆëŒ€ê°’
+	printf("ë³€ìˆ˜ aì˜ ì ˆëŒ“ê°’: %d \n", ABS(a));
+	printf("ë³€ìˆ˜ bì˜ ì ˆëŒ“ê°’: %d \n\n", ABS(b));
 
 	return 0;
 }
