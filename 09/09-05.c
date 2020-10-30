@@ -1,5 +1,8 @@
 #include <stdio.h>
+
+// 매크로 함수
 #define	ADD(a, b)	((a) + (b))
+
 int main(void)
 {
 	int	res;
