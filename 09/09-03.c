@@ -1,60 +1,54 @@
 #include <stdio.h>
-#include <conio.h>
+#include <conio.h>	// _getch
 
-// ±â´É Å°
-#define F1		59 
-#define F2		60 
-#define F3		61 
-#define F4		62 
-#define F5		63 
-#define F6		64 
-#define F7		65 
-#define F8		66 
-#define F9		67 
+// ê¸°ëŠ¥ í‚¤
+#define F1		59
+#define F2		60
+#define F3		61
+#define F4		62
+#define F5		63
+#define F6		64
+#define F7		65
+#define F8		66
+#define F9		67
 #define F10		68
 
-// ¹æÇâÅ°
+// ë°©í–¥í‚¤
 #define UP		72
 #define DOWN		80
 #define LEFT		75
-#define RIGHT	77
+#define RIGHT		77
 
-// Æ¯¼ö Å°
+// íŠ¹ìˆ˜ í‚¤
 #define ESC		27
-#define ENTER	13 
-#define SPACE	32
+#define ENTER		13
+#define SPACE		32
 #define BACKSPACE	8
 
-#define INSERT	82
-#define DELETE	83
+#define INSERT		82
+#define DELETE		83
 
 #define HOME		71
 #define END		79
- 
-#define PAGEUP	73 
+
+#define PAGEUP		73
 #define PAGEDOWN	81
 
 int main(void)
 {
-	int		ch;
-	
-	while((ch = getch()) != ESC)
-	{
-		if(ch == 0 || ch == 224 || ch == -32) 
-			ch = getch();
-		
-		printf("ÀÔ·ÂµÈ Å° °ª: %d \t", ch);
-		switch(ch)
-		{
-			case LEFT	:	printf("¿ŞÂÊ ¹æÇâÅ°\n");
-				break;
-			case RIGHT	:	printf("¿À¸¥ÂÊ ¹æÇâÅ°\n");
-				break;
-			case UP	:	printf("À§ÂÊ ¹æÇâÅ°\n");
-				break;
-			case DOWN	:	printf("¾Æ·¡ÂÊ ¹æÇâÅ°\n");
-				break;
-			default : printf("³ª¸ÓÁö Å°...\n");
+	int	ch;
+	while ((ch = _getch()) != ESC)	{
+		// íŠ¹ìˆ˜ í‚¤ë¼ë©´ ë‘ ë²ˆì§¸ ìƒìœ„ ë°”ì´íŠ¸ ê°’ì„ ì½ì–´ì˜¨ë‹¤.
+		if (ch == 0 || ch == 224 || ch == -32)
+			ch = _getch();
+
+		printf("ì…ë ¥ëœ í‚¤: %d \t", ch);
+		switch (ch)	{
+			case LEFT:	printf("ì™¼ìª½ ë°©í–¥í‚¤\n");	break;
+			case RIGHT:	printf("ì˜¤ë¥¸ìª½ ë°©í–¥í‚¤\n");	break;
+			case UP:	printf("ìœ„ìª½ ë°©í–¥í‚¤\n");	break;
+			case DOWN:	printf("ì•„ë˜ìª½ ë°©í–¥í‚¤\n");	break;
+			default: printf("ë‚˜ë¨¸ì§€ í‚¤...\n");
 		}
 	}
 
