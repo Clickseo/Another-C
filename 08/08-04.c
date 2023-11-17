@@ -1,7 +1,7 @@
-// 구조체 선언 및 정의: 형식(재) 정의된 구조체
+// 구조체 형식 정의 및 선언: 형식(재) 정의된 구조체
 #include <stdio.h>
 
-// 형식(재) 정의된 구조체: SCORE
+// 형식(재) 정의된 구조체
 typedef struct _score {
 	char	name[12];
 	int	kor, eng, math, tot;
@@ -10,20 +10,21 @@ typedef struct _score {
 
 int main(void)
 {
-	// 구조체형 변수 선언
-	SCORE	s;
+	// 구조체 변수 선언
+	// struct _score	temp;
+	SCORE			temp;
 
-	printf("이름 : ");	gets_s(s.name, sizeof(s.name));		// gets(s.name);
-	printf("국어 : ");	scanf_s("%d", &s.kor);			// scanf("%d", &s.kor);
-	printf("영어 : ");	scanf_s("%d", &s.eng);			// scanf("%d", &s.eng);
-	printf("수학 : ");	scanf_s("%d", &s.math);			// scanf("%d", &s.math);
+	printf("이름 : ");	gets_s(temp.name, sizeof(temp.name));	// gets(temp.name);
+	printf("국어 : ");	scanf_s("%d", &temp.kor);		// scanf("%d", &temp.kor);
+	printf("영어 : ");	scanf_s("%d", &temp.eng);		// scanf("%d", &temp.eng);
+	printf("수학 : ");	scanf_s("%d", &temp.math);		// scanf("%d", &temp.math);
 
-	s.tot = s.kor + s.eng + s.math;
-	s.ave = (float)(s.kor + s.eng + s.math) / 3;
+	temp.tot = temp.kor + temp.eng + temp.math;
+	temp.ave = (float)(s.kor + temp.eng + temp.math) / 3;
 
-	printf("\n %10s 학생의 성적 결과 \n", s.name);
-	printf("국어: %3d, 영어: %3d, 수학:  %3d \n", s.kor, s.eng, s.math);
-	printf("총점: %3d, 평균: %8.2lf \n", s.tot, s.ave);
+	printf("\n %10s 학생의 성적 결과 \n", temp.name);
+	printf("국어: %3d, 영어: %3d, 수학:  %3d \n", temp.kor, temp.eng, temp.math);
+	printf("총점: %3d, 평균: %8.2lf \n", temp.tot, temp.ave);
 
 	return 0;
 }
