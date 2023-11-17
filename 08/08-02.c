@@ -1,4 +1,4 @@
-// 구조체 형식 정의 및 선언: 구조체 변수
+// 구조체 형식 정의 및 선언: 구조체 변수(Structure Variable)
 #include <stdio.h>
 int main(void)
 {
