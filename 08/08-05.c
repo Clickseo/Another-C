@@ -1,4 +1,6 @@
-// 구조체 선언 및 정의: 구조체 비트 필드
+// 비트 필드 구조체(Bit Field Structure)
+// 멤버들의 크기가 비트 단위로 나누어져 있는 구조체
+
 #include <stdio.h>
 
 // DATE 형식의 크기: 12bytes
@@ -8,26 +10,29 @@ typedef struct _date {
 	unsigned int	day;
 } DATE;
 
-// 구조체 비트 필드
+// 비트 필드 구조체 형식 정의
 // new_DATE 형식의 크기: 4bytes
-typedef struct _new_date {
-	unsigned int	year: 16;	// 16bits
-	unsigned int	month: 4;	//  4bits
-	unsigned int	day: 5;		//  5bits
-} new_DATE;
+typedef struct bitFieldDATE {
+	unsigned int	year: 16;	// 0 ~ 9999	// 16 bits
+	unsigned int	month: 4;	// 1 ~ 12	//  4 bits
+	unsigned int	day: 5;		// 1 ~ 31	//  5 bits
+	unsigned char : 7;		// Reserved	// Padding Bits
+} bitFieldDATE;
 
 int main(void)
 {
-	new_DATE	a;
+	bitFieldDATE	temp;
 
-	printf("    DATE 형식의 크기: %d \n", sizeof(DATE));
-	printf("new_DATE 형식의 크기: %d \n", sizeof(new_DATE));
+	printf("        DATE 형식의 크기: %d \n", sizeof(DATE));		// 12 bits
+	printf("bitFieldDATE 형식의 크기: %d \n", sizeof(bitFieldDATE));	//  4 bits
 
-	a.year = 2020;
-	a.month = 12;
-	a.day = 31;
+	temp.year = 2000;
+	temp.month = 12;
+	temp.day = 31;
+	printf("오늘은 %d년 %d월 %d일 입니다.\n", temp.year, temp.month, temp.day );
 
-	printf("날짜: %d-%d-%d \n", a.year, a.month, a.day);
+	temp.day = 32;		// temp.day = 0;
+	printf("오늘은 %d년 %d월 %d일 입니다.\n", temp.year, temp.month, temp.day );
 
 	return 0;
 }
