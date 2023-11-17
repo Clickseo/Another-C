@@ -1,21 +1,23 @@
-// 복합 데이터 유형: 공용체
+// 복합 데이터 유형: 공용체(Union Type)
 #include <stdio.h>
 
+// 공용체 형식 정의
 typedef union _type {
 	char	ch;
 	int	i;
 	double	d;
-}TYPE;
+} TYPE;
 
 int main(void)
 {
-	TYPE	a;
+	// 공용체 변수 선언
+	TYPE	temp;
 
-	a.i = 0xFFFFFFFF;
+	temp.i = 0xFFFFFFFF;
 
-	printf("TYPE 형식의 메모리 크기: %d \n", sizeof(TYPE) );	 // 8
-	printf("a.ch : %d \n", a.ch );					// -1
-	printf("a.i  : %d \n", a.i );					// -1
+	printf("TYPE 형식의 메모리 크기: %d \n", sizeof(TYPE) );		// 8
+	printf("a.ch : %d \n", temp.ch );				// -1
+	printf("a.i  : %d \n", temp.i );				// -1
 
 	return 0;
 }
