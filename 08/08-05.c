@@ -16,7 +16,7 @@ typedef struct bitFieldDATE {
 	unsigned int	year : 16;	// 0 ~ 9999	// 16 bits
 	unsigned int	month : 4;	// 1 ~ 12	//  4 bits
 	unsigned int	day : 5;	// 1 ~ 31	//  5 bits
-	unsigned char : 7;		// Reserved	// Padding Bits
+	unsigned int : 7;		// Reserved	// Padding Bits
 } bitFieldDATE;
 
 int main(void)
