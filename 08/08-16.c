@@ -1,22 +1,23 @@
 // 구조체와 공용체
 #include <stdio.h>
 
-// 구조체 비트 필드
+// 비트 필드 구조체 형식 정의
 typedef struct _uint {
-	unsigned int	FirstBit: 8;
-	unsigned int	SecondBit: 8;
-	unsigned int	ThirdBit: 8;
-	unsigned int	ForthBit: 8;
-}UINT;
+	unsigned int	FirstBit : 8;
+	unsigned int	SecondBit : 8;
+	unsigned int	ThirdBit : 8;
+	unsigned int	ForthBit : 8;
+} UINT;
 
-// 공용체: 정수형과 구조체 멤버
+// 공용체 형식 정의: 정수형과 구조체 멤버
 typedef union _endian {
 	int	a;
 	UINT	b;
-}ENDIAN;
+} ENDIAN;
 
 int main(void)
 {
+	// 공용체 변수 선언
 	ENDIAN	 temp;
 
 	temp.a = 0x12345678;
