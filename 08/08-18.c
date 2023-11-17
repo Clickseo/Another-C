@@ -1,7 +1,8 @@
-// 복합 데이터 유형: 열거형
+// 복합 데이터 유형: 열거형(Enumerated Type)
 #include <stdio.h>
 int main(void)
 {
+	// 열거형 정의
 	enum TV {
 		AFN = 2, SBS = 6, KBS2 = 7,
 		KBS1 = 9, MBC = 11, EBS = 13,
