@@ -15,7 +15,7 @@ int main(void)
 
 	temp.i = 0xFFFFFFFF;
 
-	printf("TYPE 형식의 메모리 크기: %d \n", sizeof(TYPE) );		// 8
+	printf("TYPE 형식의 메모리 크기: %d \n", sizeof(TYPE) );	// 8
 	printf("a.ch : %d \n", temp.ch );				// -1
 	printf("a.i  : %d \n", temp.i );				// -1
 
