@@ -11,12 +11,12 @@ int main(void)
 	// 함수 호출 : DIV 함수 -- 몫과 나머지 계산
 	quot = DIV(a, b, &rem);
 
-	printf("몫 : %d, 나머지 : %d \n", quot, rem);	// 3, 1
+	printf("몫: %d, 나머지: %d \n", quot, rem);	// 3, 1
 
 	return 0;
 }
 
-// 함수 정의 : DIV 함수 -- 몫과 나머지 계산
+// 함수 정의: DIV 함수 -- 몫과 나머지 계산
 int	DIV(int a, int b, int *pRem) {
 	int	quot = a / b;		// 몫 계산
 	
