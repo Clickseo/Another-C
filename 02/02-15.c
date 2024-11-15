@@ -6,7 +6,8 @@ int main(void)
 	int	num, size;
 
 	printf("임의의 정수 입력 : ");
-	scanf_s("%d", &num);		// scanf("%d", &num);
+	scanf_s("%d", &num);
+	// scanf("%d", &num);
 
 	// 자료형(int)의 총 비트 계산
 	size = sizeof(int) * 8;
