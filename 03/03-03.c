@@ -10,7 +10,8 @@ int main(void)
 	// &a ==  pa	
 	// &b == pb
 	printf("임의의 두 정수 입력 : ");
-	scanf_s("%d %d", pa, pb);		// scanf("%d %d", pa, pb);
+	scanf_s("%d %d", pa, pb);
+	// scanf("%d %d", pa, pb);
 
 	// a == *pa
 	// b == *pb
