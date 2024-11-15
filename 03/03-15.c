@@ -10,19 +10,16 @@ int main(void)
 	pd = &d;
 
 	printf("4개의 정수 입력 : ");
-	scanf_s("%d %d %d %d", pa, pb, pc, pd);		// scanf("%d %d %d %d", pa, pb, pc, pd);
+	scanf_s("%d %d %d %d", pa, pb, pc, pd);
+	// scanf("%d %d %d %d", pa, pb, pc, pd);
 	
-	// if(a > b)
-	if(*pa < *pb)		min = *pa;	// min = a;
-	else			min = *pb;	// min = b;
-
-	// if(c < min)
-	if(*pc < min)		min = *pc;	// min = c;
+	if(*pa < *pb)	min = *pa;	// if(a > b)	min = a;
+	else		min = *pb;	// else		min = b;
 	
-	// if(d < min)
-	if(*pd < min)		min = *pd;	// min = d;
-
-	printf("최소값 : %d \n", min);
+	if(*pc < min)	min = *pc;	// if(c < min)	min = c;		
+	if(*pd < min)	min = *pd;	// if(d < min)	min = d;	
+	
+	printf("최솟값 : %d \n", min);
 
 	return 0;
 }
