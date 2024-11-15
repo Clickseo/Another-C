@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 함수 원형 선언 : DIV 함수 -- 몫과 나머지를 구하는 함수
+// 함수 원형 선언: DIV 함수 -- 몫과 나머지를 구하는 함수
 int	DIV(int, int);
 
 int main(void){
@@ -11,7 +11,7 @@ int main(void){
 	quot = DIV(a, b);
 
 	// error C4700: 초기화되지 않은 'rem' 지역 변수를 사용했습니다.
-	printf("몫 : %d, 나머지 : %d \n", quot, rem);	// 1, ?
+	printf("몫: %d, 나머지: %d \n", quot, rem);	// 1, ?
 
 	return 0;
 }
@@ -22,7 +22,7 @@ int	DIV(int a, int b) {
 	quot = a / b;		// 몫 계산
 	rem = a % b;		// 나머지 게산
 
-	printf("몫 : %d, 나머지 : %d \n", quot, rem);	// 3, 1
+	printf("몫: %d, 나머지: %d \n", quot, rem);	// 3, 1
 
 	// 함수는 최대 하나의 값만을 반환할 수 있다.
 	return quot, rem;
