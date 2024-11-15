@@ -1,4 +1,4 @@
-// main 함수 -- 명령행 인자
+// main 함수: 명령행 인자
 #include <stdio.h>
 
 // int main(int argc, char** argv)
